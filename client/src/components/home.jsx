@@ -14,9 +14,6 @@ function Home(props) {
         <News />
       </Col>
       {!isTabletOrMobile && (
-        <Col lg={4} className="mb-3 mb-lg-0">
-          <YellBox />
-        </Col>
       )}
     </Row>
   );
