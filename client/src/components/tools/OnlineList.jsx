@@ -83,7 +83,7 @@ class OnlineList extends React.PureComponent {
       <Segment className="gm_tools-container">
         <Segment>
           <Icon name="power off" color={status === true ? 'green' : 'red'} />{' '}
-          Eden is {status === true ? 'online' : 'offline'}
+          Chaos is {status === true ? 'online' : 'offline'}
         </Segment>
 
         <Segment.Group className="gm_online-count" raised>
