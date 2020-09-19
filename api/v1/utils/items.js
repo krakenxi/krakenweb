@@ -1,7 +1,7 @@
 const loadItems = async query => {
   try {
     const statement = `SELECT *, b.itemid AS id, b.name AS name,
-                IF(a.itemid IS NOT NULL, 1, 0) AS isArmor,
+                IF(a.itemid IS NOT NULL, 1, 0) AS isEquipment,
                 IF(f.itemid IS NOT NULL, 1, 0) AS isFurnishing,
                 IF(l.itemid IS NOT NULL, 1, 0) AS hasLatents,
                 IF(m.itemid IS NOT NULL, 1, 0) AS hasMods,
@@ -10,7 +10,7 @@ const loadItems = async query => {
                 IF(u.itemid IS NOT NULL, 1, 0) AS isUsable,
                 IF(w.itemid IS NOT NULL, 1, 0) AS isWeapon
             FROM item_basic AS b
-            LEFT JOIN item_armor AS a ON b.itemid  = a.itemid
+            LEFT JOIN item_equipment AS a ON b.itemid  = a.itemid
             LEFT JOIN item_furnishing AS f ON b.itemid = f.itemid
             LEFT JOIN item_latents AS l ON b.itemid = l.itemid
             LEFT JOIN item_mods AS m ON b.itemid = m.itemid
@@ -28,7 +28,7 @@ const loadItems = async query => {
 const loadItemKeys = async query => {
   try {
     const statement = `SELECT item_basic.itemid, item_basic.name, level, jobs FROM item_basic
-            LEFT JOIN item_armor ON item_basic.itemid = item_armor.itemid;`;
+            LEFT JOIN item_equipment ON item_basic.itemid = item_equipment.itemid;`;
     const results = await query(statement);
     const map = {};
     results.forEach(
@@ -60,8 +60,8 @@ const getRecipeFor = async (query, itemname) => {
 
 const getLastSold = async (query, itemname, stack = 0, count = 10) => {
   try {
-    const statement = `SELECT name, seller_name, buyer_name, sale, sell_date FROM server_auctionhouse
-            JOIN item_basic on item_basic.itemid = server_auctionhouse.itemid
+    const statement = `SELECT name, seller_name, buyer_name, sale, sell_date FROM auction_house
+            JOIN item_basic on item_basic.itemid = auction_house.itemid
             WHERE sell_date != 0 AND item_basic.name = ? AND stack = ?
             ORDER BY sell_date DESC LIMIT ?;`;
     return await query(statement, [itemname, stack, count]);
