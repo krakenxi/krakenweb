@@ -7,7 +7,7 @@ const SiteFooter = () => {
       <Row>
         <Col xs={12} lg className="my-auto">
           <p className="h4 p-3">
-            <b>CHAOS</b> | FFXI Emulation Server
+            <b>CHAOS</b> | FFXI Private Server
           </p>
         </Col>
         <Col xs={12} lg className="my-auto">
