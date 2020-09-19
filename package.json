@@ -26,9 +26,9 @@
   "author": "Scott Lassen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EdenServer/eden-web/issues"
+    "url": "https://github.com/NecridX/chaos-web.git"
   },
-  "homepage": "https://github.com/EdenServer/eden-web#readme",
+  "homepage": "https://github.com/NecridX/chaos-web.git",
   "dependencies": {
     "body-parser": "1.19.0",
     "discord.js": "11.5.1",
