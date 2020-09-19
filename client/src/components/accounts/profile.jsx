@@ -121,7 +121,7 @@ export default ({ user, logout, reload }) => {
               No characters have been created for this account.
             </Message.Header>
             <Message.Content>
-              Log into the game and create a character to start playing on Eden!
+              Log into the game and create a character to start playing on Chaos!
             </Message.Content>
           </Message>
         ) : (
