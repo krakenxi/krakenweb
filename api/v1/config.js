@@ -159,10 +159,10 @@ module.exports = {
   },
   links: [
     {
-      url: 'https://discord.gg/MWtDws8',
+      url: 'https://discord.gg/DSa2Q2',
       image:
         'https://vignette.wikia.nocookie.net/ffxi/images/0/08/Flag.jpg/revision/latest?cb=20060211183144',
-      header: 'Eden Discord',
+      header: 'Chaos Discord',
       description:
         'Join us on Discord for technical support, up-to-date annoucements, community events, memes, live chat with staff, and more.',
     },
@@ -174,14 +174,14 @@ module.exports = {
         'This is a player led wiki open for everyone to edit. Although it is specific to Eden, it may have incorrect information due to the fact that it is not an official source of information.',
     },
     {
-      url: 'https://github.com/EdenServer/community/issues',
+      url: 'https://github.com//community/issues',
       image: 'https://static.ffxiah.com/images/icon/17001.png',
       header: 'Bug Reports',
       description:
         'Eden has bugs too. :( See what issues we have and chime in if you found a bug!',
     },
     {
-      url: 'https://github.com/EdenServer/eden-web/issues',
+      url: 'https://github.com//issues',
       image: 'https://static.ffxiah.com/images/icon/17005.png',
       header: 'Website Bugs',
       description:
@@ -201,13 +201,6 @@ module.exports = {
       header: 'BG Wikipedia',
       description:
         "Another resource, however more updated that the era wiki. Can be a good place to get information that isn't provided by other sources.",
-    },
-    {
-      url: 'http://campsitarus.blogspot.com/',
-      image: 'https://www.bg-wiki.com/images/c/c3/Artemis%27s_Medal_icon.png',
-      header: 'Campsitarus',
-      description:
-        'A great resource on era retail camps. Some camps will not apply as they are WoTG area camps.',
     },
     {
       url: 'http://ffxi-atlas.mageringnetwork.com/',
@@ -246,9 +239,9 @@ module.exports = {
     },
   ],
   install: {
-    source1: 'https://bit.ly/EdenV5Installer',
-    source2: 'https://bit.ly/EdenV5BackupInstaller',
-    bootloader: 'https://bit.ly/EdenXILoader',
-    discord: 'https://discord.gg/MWtDws8',
+    source1: 'http://www.playonline.com/ff11us/download/media/install_win.html',
+    source2: '',
+    bootloader: '',
+    discord: 'https://discord.gg/DSa2Q2',
   },
 };
