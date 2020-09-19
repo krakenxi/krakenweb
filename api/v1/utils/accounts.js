@@ -12,7 +12,7 @@ const getJWTForAccountId = async (query, accid) => {
         email,
         timecreate,
         timelastmodify,
-        iss: 'https://edenxi.com',
+        iss: 'https://.com',
       };
       return jwt.sign(token, process.env.JWT_SECRET, { expiresIn: '1h' });
     } else {
