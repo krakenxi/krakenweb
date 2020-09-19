@@ -13,8 +13,6 @@ function Home(props) {
       <Col>
         <News />
       </Col>
-      {!isTabletOrMobile && (
-      )}
     </Row>
   );
 }
