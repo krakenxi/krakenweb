@@ -98,7 +98,7 @@ router.get('/:itemname', async (req, res) => {
         info.jobs,
         utils.chars.jobIdToString
       );
-      return Object.assign({ armor, stackable }, response, {
+      return Object.assign({ equipment, stackable }, response, {
         key: decodeURIComponent(itemname).toLowerCase(),
       });
     }
