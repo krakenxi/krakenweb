@@ -16,19 +16,6 @@ const Rules = ({ list }) => {
 
   return (
     <>
-      <Row className="mb-3">
-        <Col>
-          <InfoDisplay title="Terms and Conditions">
-            <ol>
-              {terms.list.map((t, i) => (
-                <li key={`term_${i}`}>{t}</li>
-              ))}
-            </ol>
-            <small>Updated {terms.updated}</small>
-          </InfoDisplay>
-        </Col>
-      </Row>
-
       <Row className="my-3">
         <Col>
           <InfoDisplay title="Formal Rules">

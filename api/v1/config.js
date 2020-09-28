@@ -1,39 +1,19 @@
 module.exports = {
   rules: {
-    terms: {
-      updated: '5/22/2020',
-      list: [
-        'You will be watched from time to time by the active/hidden GM team that patrols and responds to reports for cheating.',
-        'Like most online games, Eden will collect and store data from you such as IP addresses, MAC addresses, and other unique device identifiers to help curb cheating.',
-        'You will follow the server rules listed below. ALL rules may be met with punishment including up to a ban on all Eden content.',
-        'You will not engage in any manner to profit from the work of SQUARE ENIX CO., LTD. or the Eden staff. This includes the selling of accounts, gil, or items.',
-        'These terms may change at any time. Each time you connect to Eden you are bound to the terms as they are posted here.',
-        'You acknowledge that we are not affiliated in any way with SQUARE ENIX CO., LTD.',
-        'You acknowledge that SQUARE ENIX CO., LTD. is the owner of all FINAL FANTASY® XI content and images with all rights reserved.',
-        'You acknowledge that Eden has no ownership over or affiliation with any of the content, images, registered trademarks or any other rights reserved by SQUARE ENIX CO., LTD.',
-      ],
-    },
     rules: {
       updated: '5/22/2020',
       list: [
-        'Using a non-Eden bootloader--including using a modified version of the Eden bootloader--is NOT allowed. The bootloader must be downloaded from the official site or #annoucements channel in our official Discord otherwise there are no guarantees it is official.',
         'If something feels like it is broken, either not like it was on era retail or a potential exploit or too overpowered (read: if something seems like it was not intentional from the development team) report it. Knowingly taking advantage of these activities is NOT allowed.',
         'Each player is only allowed to have 2 characters logged in and active, with an additional third character confined to a city and idle. This character may only be used to bazaar or mule items while your other characters are logged in. (This will not be locked down by IP, but it will be actively patrolled.) Tri-boxing 3 or more active characters is NOT allowed.',
         'Claim bots, modifying dats to claim, any type of targeting using mob ID (such as /target 12345678) or using any other third party tools such as Shorthand or its Windower equivalent to claim is NOT allowed.',
         "Any scripts, bots, or addons that automate actions are NOT allowed. Macros using the /wait or <wait> feature within the game are OK. (Such as /lastsynth macros up to the game's maximum of 6 lines.)",
-        "Account sharing is strongly discouraged and may be disallowed in the future. If one or more of your accounts are linked to a player that is caught cheating by either logging into an offending player's account or by that player logging into one of your accounts you will share the same punishment as the cheater--which is 9 out of 10 times a permanent ban.",
-        'Not really a rule but be aware that players may be limited in the future to 3 characters. So create new ones at your own risk. It is undecided how additional characters would be handled if we imposed these limits.',
-        'Using known bugs (including terrain) or unpatched exploits to your advantage in a way that would not be possible in retail. For example: purposefully crawling on walls to avoid aggro using the current navmesh’s bugs is NOT allowed. (Note: this does not mean people are exploiting because they are standing on walls. It is a normal reaction to be on a wall. But climbing through tight spaces without oils and powders without aggro is obviously a bug and you will be punished for it.)',
-        'Testing known or possible exploits on the live server is not allowed unless permission is given from a server administrator first. Like every other rule this includes GMs and developers too.',
-        "Holding a monster for the purpose of grieving other players or monopolizing the time it spawns is NOT allowed (note that since determining a player's intent is highly subjective to the GM addressing the ticket, if asked to begin damage by a GM you must start fighting the monster within a reasonable amount of time or you will forfeit the claim). To clarify, reasonable is up to the GM team's discretion, holding to recover from a wipe is allowed, intention to kill with reinforcements on the way isn't holding, and Darters in Dragon's Aery may be held alive 5 minutes from time of claim. Please see Discord and ask a GM for more information if you need it.",
+        'Using known bugs (including terrain) or unpatched exploits to your advantage in a way that would not be possible in retail.',
+        "Holding a monster for the purpose of grieving other players or monopolizing the time it spawns is NOT allowed.",
         "Not so much a rule either but if you are aware of any non-era item/NM/recipe/et cetera please report it. And do expect the rewards obtained from it to be removed. We can't find every non-era thing at once but as we find them they will be removed.",
-        'Creating characters for the purpose of market manipulation is NOT allowed.',
-        'Gardening is only allowed on up to 3 characters. (30 total plants.)',
         'Hacking/exploiting/cheating of any kind including, but not limited to, buying items and selling back for more than you paid for is NOT allowed.',
         'Spamming any public chat is NOT allowed. (Linkshells and tells are the exception as they will only be subject to harassment reports.)',
         'Harassment of any kind including offensive character or linkshell names is NOT allowed.',
-        'Character names that depict cheating, could be considered sexually explicit, or any names that could be disallowed on retail are NOT allowed.',
-        'Use of, or advertisement of, any cheat program/addon or a non-approved addon/program on Eden or its media is NOT allowed. There will be an allowed list and a non-allowed list. Those not in the approved list are discouraged from use as you may be penalized for using them. Use at your own risk. Those that are similar to a forbidden program are most likely forbidden as well.',
+        'Use of, or advertisement of, any cheat program/addon or a non-approved addon/program on Eden.',
         'GM interaction is limited here but if a GM messages you in game and you are active, respond within a reasonable time. Ignoring a GM is likely to get you jailed as we will likely think you are afk botting.',
       ],
       violations: [
@@ -105,7 +85,7 @@ module.exports = {
         },
         {
           item:
-            'Any modified bootloader or a bootloader downloaded from any source other than edenxi.com',
+            'Any modified bootloader.',
         },
         { item: 'AuctionHelper / Auction House assistants' },
         { item: 'Multisend / Servo' },
@@ -137,8 +117,6 @@ module.exports = {
     yells: {
       updated: '7/12/2020',
       list: [
-        'Yell is a global chat and has a 15 minute cooldown period. Shout is limited to a single zone with a large radius and has a 5 minute cooldown period, except in some instanced zones.',
-        'Zoning and logging off do not reset these cooldowns. New characters will have yell and shout cooldowns applied during the opening cutscene. Do not expect these limitations to change, as they are applied to prevent abuse.',
         'Do not yell or shout profanity, hate messages, or any harassing statements. Violating this rule may result in mutes and/or an account ban depending on severity.',
         'Do not banter back and forth between yourselves in yell (instead use shout for banter). This includes replying in yell to someone who has violated these rules. Banter in yell may result in mutes applied.',
         'Asking a legitimate FFXI question in yell is fine. However, replies to questions should not be sent in yell. Shout or tell is preferred.',
