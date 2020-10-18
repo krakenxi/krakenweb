@@ -1,9 +1,12 @@
 {
-  "name": "chaos-web",
+  "name": "chaosxi",
   "version": "1.0.0",
   "description": "Online tools for use with the Chaos game server.",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
     "ci:client": "cd client && npm ci",
@@ -20,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NecridX/chaos-web.git"
+    "url": "git+https://github.com/NecridX/chaosxi.github.oi.git"
   },
   "keywords": [],
   "author": "Scott Lassen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NecridX/chaos-web.git"
+    "url": "https://github.com/NecridX/chaosxi.github.oi.git"
   },
-  "homepage": "https://github.com/NecridX/chaos-web.git",
+  "homepage": "https://chaosxi.github.oi",
   "dependencies": {
     "body-parser": "1.19.0",
     "discord.js": "11.5.1",
