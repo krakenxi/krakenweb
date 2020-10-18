@@ -1,3 +1,5 @@
+import owner from '../../../client/src/owner';
+
 const loadItems = async query => {
   try {
     const statement = `SELECT *, b.itemid AS id, b.name AS name,
@@ -84,6 +86,22 @@ const getBazaars = async (query, itemname) => {
   }
 };
 
+const getOwners = async (query, itemid) => {
+  // Prevent any funny business
+  if (!owner.owner_item_list.includes(itemid)) {
+    return [];
+  }
+  try {
+    const statement = `SELECT charname FROM chars c
+        JOIN char_inventory i  ON i.charid = c.charid
+        WHERE i.itemid = ? AND c.deleted IS NULL ORDER BY charname ASC;`;
+    return await query(statement, [itemid]);
+  } catch (error) {
+    console.error('Error while getting item owners', error);
+    return [];
+  }
+};
+
 const getJobs = (level, jobs, idToStr) => {
   if (level && jobs) {
     const vals = [];
@@ -98,11 +116,12 @@ const getJobs = (level, jobs, idToStr) => {
   }
 };
 
-module.exports = {
+export {
   loadItems,
   loadItemKeys,
   getRecipeFor,
   getLastSold,
   getBazaars,
+  getOwners,
   getJobs,
 };
