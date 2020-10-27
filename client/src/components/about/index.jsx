@@ -16,7 +16,7 @@ const About = () => {
           >
             <Card.Text>
               Looking for that old school feel and challenge but still want to be able to experience some of the newer content?
-              Then look no further than Chaos!  
+              Then look no further than Chaos!
             </Card.Text>
           </InfoDisplay>
         </Col>
@@ -82,8 +82,8 @@ const About = () => {
                   <td>
                     Removed out of Era items.
                   </td>
+                  <td>economy</td>
                 </tr>
-                <td>economy</td>
               </tbody>
             </table>
           </InfoDisplay>
