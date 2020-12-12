@@ -24,65 +24,62 @@ const About = () => {
 
       <Row className="my-3">
         <Col>
-          <InfoDisplay title="How is Chaos different from retail?">
-            <Card.Text>
-              Changes made to Chaos to give the Era-75 Cap feeling and experience.
-            </Card.Text>
+          <InfoDisplay title="Server Settings">
             <table className="ui celled table">
               <thead>
                 <tr>
-                  <th>Retail</th>
+                  <th>Settings</th>
                   <th>Chaos</th>
-                  <th>Reasoning</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Retail Exp</td>
-                  <td>Era Exp</td>
-                  <td>difficulty</td>
+                  <td>Level Cap</td>
+                  <td>75</td>
                 </tr>
                 <tr>
-                  <td>Retail Fame</td>
-                  <td>Era Fame</td>
-                  <td>difficulty</td>
-                </tr>
-                <tr>
-                  <td>
-                    All Expansions
-                  </td>
+                  <td>Expansions</td>
                   <td>Currently only up to ToAU</td>
-                  <td>development</td>
                 </tr>
                 <tr>
-                <td>
-                    The auction house is limited to 7 listings and items expire
-                    after 3 real life days
-                  </td>
-                  <td>
-                    The auction house has unlimited listings and items expire
-                    after 90 real life days
-                  </td>
-                  <td>economy</td>
+                  <td>Exp</td>
+                  <td>Era Exp</td>
                 </tr>
                 <tr>
+                  <td>Movement Speed</td>
+                  <td>Era Speed</td>
+                </tr>
+                <tr>
+                  <td>Fame</td>
+                  <td>Era Fame</td>
+                </tr>
+                <tr>
+                  <td>Auction House</td>
+                  <td>Unlimited Listings</td>
+                </tr>
+                <tr>
+                  <td>Items</td>
+                  <td>Removed Out of Era items.</td>
+                </tr>
+                <tr>
+                  <td>Mobs</td>
                   <td>
-                    Retail mob drops and levels.
-                  </td>
-                  <td>
+                    Mobs walk back.
                     Out of era drops removed or moved back to an Era setting.
                     Mob levels readjusted back to Era levels.
                   </td>
-                  <td>economy</td>
                 </tr>
                 <tr>
+                  <td>Trusts</td>
+                  <td>Enabled</td>
+                </tr>
+                <tr>
+                  <td>Homepoints</td>
                   <td>
-                    Retail Guild Shop items.
+                    MogHouse Homepoint available.
+                    Only in Towns outside of Cities.
+                    Can only set as Homepoint.
                   </td>
-                  <td>
-                    Removed out of Era items.
-                  </td>
-                  <td>economy</td>
                 </tr>
               </tbody>
             </table>

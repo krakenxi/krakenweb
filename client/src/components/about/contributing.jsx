@@ -5,7 +5,7 @@ import Setup from './setup';
 function Contributing() {
   const setupContent = () => <Setup />;
   const writingBcnmsContent = () => <p>Under development.</p>;
-  const edenDocsContent = () => <p>Under development.</p>;
+  const chaosDocsContent = () => <p>Under development.</p>;
 
   const [activeKey, setActiveKey] = useState('setup');
   const [activeContent, setActiveContent] = useState(setupContent);
@@ -19,7 +19,7 @@ function Contributing() {
         setActiveContent(writingBcnmsContent());
         break;
       case 'docs':
-        setActiveContent(edenDocsContent());
+        setActiveContent(chaosDocsContent());
         break;
       default:
         setActiveContent('');
@@ -47,8 +47,8 @@ function Contributing() {
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link disabled eventKey="docs" href="#eden-docs">
-              Eden Docs
+            <Nav.Link disabled eventKey="docs" href="#chaos-docs">
+              Chaos Docs
             </Nav.Link>
           </Nav.Item>
         </Nav>

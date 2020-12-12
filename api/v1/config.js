@@ -1,22 +1,16 @@
 module.exports = {
   rules: {
     rules: {
-      updated: '5/22/2020',
+      updated: '12/07/2020',
       list: [
-        'If something feels like it is broken, either not like it was on era retail or a potential exploit or too overpowered (read: if something seems like it was not intentional from the development team) report it. Knowingly taking advantage of these activities is NOT allowed.',
-        'Each player is only allowed to have 2 characters logged in and active, with an additional third character confined to a city and idle. This character may only be used to bazaar or mule items while your other characters are logged in. (This will not be locked down by IP, but it will be actively patrolled.) Tri-boxing 3 or more active characters is NOT allowed.',
-        'Claim bots, modifying dats to claim, any type of targeting using mob ID (such as /target 12345678) or using any other third party tools such as Shorthand or its Windower equivalent to claim is NOT allowed.',
-        "Any scripts, bots, or addons that automate actions are NOT allowed. Macros using the /wait or <wait> feature within the game are OK. (Such as /lastsynth macros up to the game's maximum of 6 lines.)",
-        'Using known bugs (including terrain) or unpatched exploits to your advantage in a way that would not be possible in retail.',
-        "Holding a monster for the purpose of grieving other players or monopolizing the time it spawns is NOT allowed.",
-        "Not so much a rule either but if you are aware of any non-era item/NM/recipe/et cetera please report it. And do expect the rewards obtained from it to be removed. We can't find every non-era thing at once but as we find them they will be removed.",
-        'Hacking/exploiting/cheating of any kind including, but not limited to, buying items and selling back for more than you paid for is NOT allowed.',
-        'Spamming any public chat is NOT allowed. (Linkshells and tells are the exception as they will only be subject to harassment reports.)',
-        'Harassment of any kind including offensive character or linkshell names is NOT allowed.',
-        'Use of, or advertisement of, any cheat program/addon or a non-approved addon/program on Eden.',
-        'GM interaction is limited here but if a GM messages you in game and you are active, respond within a reasonable time. Ignoring a GM is likely to get you jailed as we will likely think you are afk botting.',
+        'If something feels like it is broken, please report it.',
+        'Do not claim mobs and wait for others to show up. If you claim the mob then you should be killing it.',
+        'Harassment of any kind is NOT allowed.',
+        'Hacking/exploiting/cheating of any kind is NOT allowed.',
+        'Any scripts, bots, or addons that automate actions are NOT allowed. Macros using the /wait or <wait> are OK.',
+        'Any plugin or addon that gives an advantage or abilities that you normally would not have is not allowed.',
       ],
-      violations: [
+      /* violations: [
         {
           rule: 'Using Bots to include Fish Botting and Claim Botting',
           consequence: 'Banned',
@@ -59,10 +53,10 @@ module.exports = {
           rule: 'Inappropriate Character Names',
           consequence: 'Randomly Assigned Character Name',
         },
-      ],
+      ], */
     },
     software: {
-      updated: '5/22/2020',
+      updated: '12/07/2020',
       list: [
         { item: 'Combat Parsers', allowed: true },
         { item: 'GearLock', allowed: true },
@@ -83,44 +77,14 @@ module.exports = {
             'Renamer (only using the lists we provide -- NOT for custom naming of mobs)',
           allowed: true,
         },
-        {
-          item:
-            'Any modified bootloader.',
-        },
-        { item: 'AuctionHelper / Auction House assistants' },
-        { item: 'Multisend / Servo' },
-        {
-          item:
-            'Minimap and other map overlays that interact with the world  (Show NPCs, players, etc)',
-        },
-        { item: 'Allmaps' },
-        {
-          item:
-            'Scripts ran unattended. (If a GM speaks to you and you do not reply within a certain time frame, you may be jailed.)',
-        },
-        { item: 'Shorthand (when used to claim)' },
-        { item: 'LightLuggage' },
-        {
-          item:
-            'Fishing/exp/healing bots or any other bots that automate player actions',
-        },
-        {
-          item:
-            'Claim tools or character enhancement tools like flee or warp hacks.',
-        },
-        {
-          item:
-            "WatchDog (or anything that gives you abilities you shouldn't have access to)",
-        },
       ],
     },
     yells: {
-      updated: '7/12/2020',
+      updated: '12/07/2020',
       list: [
-        'Do not yell or shout profanity, hate messages, or any harassing statements. Violating this rule may result in mutes and/or an account ban depending on severity.',
-        'Do not banter back and forth between yourselves in yell (instead use shout for banter). This includes replying in yell to someone who has violated these rules. Banter in yell may result in mutes applied.',
-        'Asking a legitimate FFXI question in yell is fine. However, replies to questions should not be sent in yell. Shout or tell is preferred.',
-        'Adding on irrelevant banter not related to the purpose of a yell may result in a mute. Example: “WTS pebbles also... player XYZ sux!”',
+        'Do not yell or shout profanity, hate messages, or any harassing statements.',
+        'Do not chat back and forth between yourselves in yell.',
+        'Replies to a yell should be done through shout or tell.',
       ],
     },
     discord: {
@@ -145,25 +109,18 @@ module.exports = {
         'Join us on Discord for technical support, up-to-date annoucements, community events, memes, live chat with staff, and more.',
     },
     {
-      url: 'http://classicffxi.wikia.com/wiki/Classic_FFXI_community',
-      image: 'https://avatars2.githubusercontent.com/u/1171011?s=200&v=4',
-      header: 'Eden Wiki',
-      description:
-        'This is a player led wiki open for everyone to edit. Although it is specific to Eden, it may have incorrect information due to the fact that it is not an official source of information.',
-    },
-    {
       url: 'https://github.com//community/issues',
       image: 'https://static.ffxiah.com/images/icon/17001.png',
       header: 'Bug Reports',
       description:
-        'Eden has bugs too. :( See what issues we have and chime in if you found a bug!',
+        'Chaos has bugs too. :( See what issues we have and chime in if you found a bug!',
     },
     {
       url: 'https://github.com//issues',
       image: 'https://static.ffxiah.com/images/icon/17005.png',
       header: 'Website Bugs',
       description:
-        'In addition to technical bugs, Eden refines rules, information, and connection details occassionally. Chime in if you found an error!',
+        'In addition to technical bugs, Chaos refines rules, information, and connection details occassionally. Chime in if you found an error!',
     },
     {
       url: 'https://ffxiclopedia.wikia.com/wiki/Main_Page',
@@ -192,7 +149,7 @@ module.exports = {
       image: 'https://static.ffxiah.com/images/icon/3706.png',
       header: 'Pyogenes Timer',
       description:
-        "Pyogenes developed a Vana'Diel clock for retail. Eden runs on the same timer.",
+        "Pyogenes developed a Vana'Diel clock for retail. Chaos runs on the same timer.",
     },
     {
       url: 'http://www.ffxidb.com/',
@@ -206,14 +163,14 @@ module.exports = {
       image: 'https://www.ashitaxi.com/assets/img/ashita.ico',
       header: 'Ashita',
       description:
-        'Eden officially supports Ashita v3 to enhance gameplay. Ashita v3 comes bundled with the Eden installer. You can find support for Ashita v3-specific things here.',
+        'Chaos officially supports Ashita v3 to enhance gameplay. Ashita v3 comes bundled with the Chaos installer. You can find support for Ashita v3-specific things here.',
     },
     {
       url: 'http://windower.net/',
       image: 'http://windower.net/img/icon.png',
       header: 'Windower',
       description:
-        'Windower 4 and 5 are not officially supported on Eden to enhance gameplay. While we do not offer setup or troubleshooting assistance, it does work on Eden.',
+        'Windower 4 and 5 are not officially supported on Chaos to enhance gameplay. While we do not offer setup or troubleshooting assistance, it does work on Chaos.',
     },
   ],
   install: {
