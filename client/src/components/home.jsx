@@ -13,7 +13,7 @@ function Home(props) {
       <Col>
         <News />
       </Col>
-    </Row>
+   </Row>
   );
 }
 
