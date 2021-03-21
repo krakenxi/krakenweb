@@ -105,7 +105,7 @@ router.get('/:itemname', async (req, res) => {
       const response = lists.items[item.id];
       const info = req.app.locals.itemKeys[item.id];
       const stackable = Boolean(item.stackSize > 1);
-      const armor = utils.items.getJobs(
+      const equipment = utils.items.getJobs(
         info.level,
         info.jobs,
         utils.chars.jobIdToString
