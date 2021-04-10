@@ -11,7 +11,7 @@ const About = () => {
         <Col>
           <InfoDisplay
             title={
-              "Goal!"
+              "About"
             }
           >
             <Card.Text>
@@ -35,27 +35,27 @@ const About = () => {
               <tbody>
                 <tr>
                   <td>Level Cap</td>
-                  <td>75</td>
+                  <td>75.  <i>Note: May be increased later on.</i></td>
                 </tr>
                 <tr>
                   <td>Expansions</td>
-                  <td>Currently only up to ToAU</td>
+                  <td>Currently only up to ToAU.  <i>Note: May be expanded later on.</i></td>
                 </tr>
                 <tr>
                   <td>Exp</td>
-                  <td>Era Exp</td>
+                  <td>Era Exp.</td>
                 </tr>
                 <tr>
                   <td>Movement Speed</td>
-                  <td>Era Speed</td>
+                  <td>Era Speed.</td>
                 </tr>
                 <tr>
                   <td>Fame</td>
-                  <td>Era Fame</td>
+                  <td>Era Fame.</td>
                 </tr>
                 <tr>
                   <td>Auction House</td>
-                  <td>Unlimited Listings</td>
+                  <td>Unlimited Listings and posted for 30 days.</td>
                 </tr>
                 <tr>
                   <td>Items</td>
@@ -64,21 +64,19 @@ const About = () => {
                 <tr>
                   <td>Mobs</td>
                   <td>
-                    Mobs walk back.
-                    Out of era drops removed or moved back to an Era setting.
-                    Mob levels readjusted back to Era levels.
+                    Era settings and levels.
                   </td>
                 </tr>
                 <tr>
                   <td>Trusts</td>
-                  <td>Enabled</td>
+                  <td>Enabled.</td>
                 </tr>
                 <tr>
                   <td>Homepoints</td>
                   <td>
-                    MogHouse Homepoint available.
-                    Only in Towns outside of Cities.
-                    Can only set as Homepoint.
+                    MogHouse Homepoint available.<br></br>
+                    Town Homepoints outside of cities are available.<br></br>
+                    No Homepoint teleportations.
                   </td>
                 </tr>
               </tbody>
@@ -87,6 +85,7 @@ const About = () => {
         </Col>
       </Row>
 
+    {/*
       <Row className="mt-3">
         <Col>
           <InfoDisplay title="How can I help?">
@@ -98,6 +97,7 @@ const About = () => {
           </InfoDisplay>
         </Col>
       </Row>
+    */}
     </>
   );
 };

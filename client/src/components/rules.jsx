@@ -36,6 +36,19 @@ const Rules = ({ list }) => {
 
       <Row className="my-3">
         <Col>
+          <InfoDisplay title="Yell and Shout Rules">
+            <ol>
+              {yells.list.map((t, i) => (
+                <li key={`term_${i}`}>{t}</li>
+              ))}
+            </ol>
+            <small>Updated {yells.updated}</small>
+          </InfoDisplay>
+        </Col>
+      </Row>
+
+      <Row className="my-3">
+        <Col>
           <InfoDisplay title="Third-party software">
             <Card.Text>
               Listed below is a list of approved Plugins or Addons that
@@ -67,19 +80,6 @@ const Rules = ({ list }) => {
               </tbody>
             </Table>
             <small>Updated {software.updated}</small>
-          </InfoDisplay>
-        </Col>
-      </Row>
-
-      <Row className="my-3">
-        <Col>
-          <InfoDisplay title="Yell and Shout Rules">
-            <ol>
-              {yells.list.map((t, i) => (
-                <li key={`term_${i}`}>{t}</li>
-              ))}
-            </ol>
-            <small>Updated {yells.updated}</small>
           </InfoDisplay>
         </Col>
       </Row>
