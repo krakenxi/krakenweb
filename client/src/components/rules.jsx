@@ -47,7 +47,7 @@ const Rules = ({ list }) => {
         </Col>
       </Row>
 
-      <Row className="my-3">
+      {/*<Row className="my-3">
         <Col>
           <InfoDisplay title="Third-party software">
             <Card.Text>
@@ -82,7 +82,7 @@ const Rules = ({ list }) => {
             <small>Updated {software.updated}</small>
           </InfoDisplay>
         </Col>
-      </Row>
+      </Row>*/}
     </>
   );
 };
