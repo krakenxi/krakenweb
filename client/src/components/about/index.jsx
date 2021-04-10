@@ -35,11 +35,18 @@ const About = () => {
               <tbody>
                 <tr>
                   <td>Level Cap</td>
-                  <td>75.  <i>Note: May be increased later on.</i></td>
+                  <td>
+                    75.  <br></br>
+                    <i>Note: May be increased later on.</i>
+                  </td>
                 </tr>
                 <tr>
                   <td>Expansions</td>
-                  <td>Currently only up to ToAU.  <i>Note: May be expanded later on.</i></td>
+                  <td>
+                    Currently only up to ToAU.  <br></br>
+                    <i>Note: May be expanded later on.</i><br></br>
+                    RoV and RoE are Enabled.
+                  </td>
                 </tr>
                 <tr>
                   <td>Exp</td>
