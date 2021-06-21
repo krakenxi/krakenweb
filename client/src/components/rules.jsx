@@ -22,7 +22,7 @@ const Rules = ({ list }) => {
             <Card.Text>
               The main goal is to have fun.  But in order to achieve this and keep the peace,
               a few rules are expected to be followed.  Please look over them before
-              playing on Chaos.
+              playing on Kraken.
             </Card.Text>
             <ol>
               {rules.list.map((t, i) => (
@@ -52,8 +52,8 @@ const Rules = ({ list }) => {
           <InfoDisplay title="Third-party software">
             <Card.Text>
               Listed below is a list of approved Plugins or Addons that
-              can be used on Chaos.  If it is not listed below, please
-              refrain from using it on Chaos.
+              can be used on Kraken.  If it is not listed below, please
+              refrain from using it on Kraken.
             </Card.Text>
             <Table striped bordered>
               <thead>

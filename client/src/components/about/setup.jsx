@@ -139,7 +139,7 @@ export default () => (
         the output by selecting the View menu and then clicking on Output
       </li>
       <li>
-        Run the Play on Chaos shortcut that came with your normal Chaos
+        Run the Play on Kraken shortcut that came with your normal Kraken
         installation.
       </li>
       <li>
@@ -148,7 +148,7 @@ export default () => (
         and then click Edit Configuration
       </li>
       <li>
-        Set the window configurations to the same that you have on normal Chaos
+        Set the window configurations to the same that you have on normal Kraken
         and then click the boot tab. Only edit the following in the boot tab:
       </li>
       <li>
@@ -178,7 +178,7 @@ export default () => (
         says "The map-server is ready to work".
       </li>
       <li>
-        Run the Play on Chaos shortcut and then click on the Developer
+        Run the Play on Kraken shortcut and then click on the Developer
         configuration to connect to your local development server.
       </li>
       <li>

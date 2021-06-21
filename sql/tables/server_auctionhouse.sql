@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `tpzdb`
+-- Base de données: `xidb`
 --
 
 -- --------------------------------------------------------
@@ -45,4 +45,3 @@ CREATE TABLE IF NOT EXISTS `server_auctionhouse` (
 --
 -- Contenu de la table `server_auctionhouse`
 --
-

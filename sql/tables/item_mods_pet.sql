@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de donn?es: `tpzdb`
+-- Base de donn?es: `xidb`
 --
 
 -- --------------------------------------------------------
@@ -489,4 +489,3 @@ INSERT INTO `item_mods_pet` VALUES (28605,30,7,1);      -- Avatar: Magic Accurac
 INSERT INTO `item_mods_pet` VALUES (28643,12,8,3);     -- Refraction Cape Automaton: INT+8
 INSERT INTO `item_mods_pet` VALUES (28643,13,8,3);      -- Automaton: MND+8
 INSERT INTO `item_mods_pet` VALUES (28643,30,3,3);      -- Automaton: Magic Accuracy+3
-

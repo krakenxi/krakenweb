@@ -68,28 +68,28 @@ class App extends Component {
         icon: <FontAwesomeIcon icon={faNewspaper} />,
       },
       {
-        key: 'site-link-install',
-        to: '/install',
-        text: 'Install',
-        icon: <FontAwesomeIcon icon={faDesktop} />,
-      },
-      {
         key: 'site-link-tools',
         to: '/tools',
-        text: 'Tools',
+        text: 'Database',
         icon: <FontAwesomeIcon icon={faWrench} />,
       },
-      {
-        key: 'site-link-links',
-        to: '/links',
-        text: 'Links',
-        icon: <FontAwesomeIcon icon={faLink} />,
-      },
+      // {
+      //  key: 'site-link-links',
+      //  to: '/links',
+      //  text: 'Links',
+      //  icon: <FontAwesomeIcon icon={faLink} />,
+      // },
       {
         key: 'site-links-rules',
         to: '/rules',
         text: 'Rules',
         icon: <FontAwesomeIcon icon={faGavel} />,
+      },
+      {
+        key: 'site-link-install',
+        to: '/install',
+        text: 'Install',
+        icon: <FontAwesomeIcon icon={faDesktop} />,
       },
       {
         key: 'site-links-about',

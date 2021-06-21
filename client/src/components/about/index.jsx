@@ -16,7 +16,7 @@ const About = () => {
           >
             <Card.Text>
               Looking for that old school feel and challenge but still want to be able to experience some of the newer content?
-              Then look no further than Chaos!
+              Then look no further than Kraken!
             </Card.Text>
           </InfoDisplay>
         </Col>
@@ -29,7 +29,7 @@ const About = () => {
               <thead>
                 <tr>
                   <th>Settings</th>
-                  <th>Chaos</th>
+                  <th>Kraken</th>
                 </tr>
               </thead>
               <tbody>

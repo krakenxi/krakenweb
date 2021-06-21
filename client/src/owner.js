@@ -1,6 +1,6 @@
 export default {
     owner_item_list: [
-      // Relics
+      // Krakens
       15070, // Aegis
       18264, // Spharai
       18270, // Mandau

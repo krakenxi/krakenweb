@@ -9,7 +9,7 @@ const SiteNavbar = props => {
   return (
     <Navbar className="gm_nav" bg="dark" variant="dark" expand="lg">
       <Navbar.Brand as={Link} to="/" className="navbar-brand-override">
-        <span className="gm_banner_text">Chaos</span>
+        <span className="gm_banner_text">KRAKEN</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

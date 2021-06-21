@@ -30,12 +30,12 @@ body {
 }
 
 .gm_banner_text {
-  color: #f8f8ff;
+  color: #ffffff;
   display: block;
-  font-family: 'Ruslan Display', 'Trebuchet MS', 'Lucida Sans Unicode',
+  font-family: 'Neuton', 'Trebuchet MS', 'Lucida Sans Unicode',
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: -0.25rem;
   margin: 0;
   text-align: center;

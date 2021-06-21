@@ -104,7 +104,7 @@ function install(props) {
                   <li>Click on the Plus icon to make a new configuration, then edit the file line with the file path to your xiloader (can use the ... to browse).</li>
                   <li>In the command line, place your server details as:</li>
                   <code>
-                  --server chaosxi.ddns.net --user Username --pass Password
+                  --server krakenxi.ddns.net --user Username --pass Password
                   </code>
                   <li>Choose "Window" to adjust your resolution if need be.</li>
                   <li>Click the paper icon to save, launch with the red arrow.</li>
@@ -118,7 +118,7 @@ function install(props) {
                 <code>
                     profile name="Username"
                     <br />
-                    --server chaosxi.ddns.net --user Username --pass Password
+                    --server krakenxi.ddns.net --user Username --pass Password
                     <br />
                     HDD:\path\to\xiloader.exe
                     <br />

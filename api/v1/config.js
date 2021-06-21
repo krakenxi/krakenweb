@@ -104,7 +104,7 @@ module.exports = {
       url: 'https://discord.gg/DSa2Q2',
       image:
         'https://vignette.wikia.nocookie.net/ffxi/images/0/08/Flag.jpg/revision/latest?cb=20060211183144',
-      header: 'Chaos Discord',
+      header: 'Kraken Discord',
       description:
         'Join us on Discord for technical support, up-to-date annoucements, community events, memes, live chat with staff, and more.',
     },
@@ -113,14 +113,14 @@ module.exports = {
       image: 'https://static.ffxiah.com/images/icon/17001.png',
       header: 'Bug Reports',
       description:
-        'Chaos has bugs too. :( See what issues we have and chime in if you found a bug!',
+        'Kraken has bugs too. :( See what issues we have and chime in if you found a bug!',
     },
     {
       url: 'https://github.com//issues',
       image: 'https://static.ffxiah.com/images/icon/17005.png',
       header: 'Website Bugs',
       description:
-        'In addition to technical bugs, Chaos refines rules, information, and connection details occassionally. Chime in if you found an error!',
+        'In addition to technical bugs, Kraken refines rules, information, and connection details occassionally. Chime in if you found an error!',
     },
     {
       url: 'https://ffxiclopedia.wikia.com/wiki/Main_Page',
@@ -149,7 +149,7 @@ module.exports = {
       image: 'https://static.ffxiah.com/images/icon/3706.png',
       header: 'Pyogenes Timer',
       description:
-        "Pyogenes developed a Vana'Diel clock for retail. Chaos runs on the same timer.",
+        "Pyogenes developed a Vana'Diel clock for retail. Kraken runs on the same timer.",
     },
     {
       url: 'http://www.ffxidb.com/',
@@ -163,14 +163,14 @@ module.exports = {
       image: 'https://www.ashitaxi.com/assets/img/ashita.ico',
       header: 'Ashita',
       description:
-        'Chaos officially supports Ashita v3 to enhance gameplay. Ashita v3 comes bundled with the Chaos installer. You can find support for Ashita v3-specific things here.',
+        'Kraken officially supports Ashita v3 to enhance gameplay. Ashita v3 comes bundled with the Kraken installer. You can find support for Ashita v3-specific things here.',
     },
     {
       url: 'http://windower.net/',
       image: 'http://windower.net/img/icon.png',
       header: 'Windower',
       description:
-        'Windower 4 and 5 are not officially supported on Chaos to enhance gameplay. While we do not offer setup or troubleshooting assistance, it does work on Chaos.',
+        'Windower 4 and 5 are not officially supported on Kraken to enhance gameplay. While we do not offer setup or troubleshooting assistance, it does work on Kraken.',
     },
   ],
   install: {
