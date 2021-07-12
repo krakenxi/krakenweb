@@ -70,7 +70,7 @@ class App extends Component {
       {
         key: 'site-link-tools',
         to: '/tools',
-        text: 'Database',
+        text: 'Tools',
         icon: <FontAwesomeIcon icon={faWrench} />,
       },
       // {
