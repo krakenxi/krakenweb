@@ -4,4 +4,4 @@ author: Kraken
 title: Coming Soon!
 ---
 
-<img src="https://bosspm.ca/wp-content/uploads/2020/01/coming-soon5-600x271.png"/>
+[](https://bosspm.ca/wp-content/uploads/2020/01/coming-soon5-600x271.png)
