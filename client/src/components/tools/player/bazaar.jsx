@@ -54,6 +54,7 @@ export default ({ name }) => {
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>Item</Table.HeaderCell>
+          <Table.HeaderCell>Quantity</Table.HeaderCell>
           <Table.HeaderCell>Price</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
@@ -61,6 +62,7 @@ export default ({ name }) => {
         {bazaar.map((sell, i) => (
           <Table.Row key={`ah_history_${i}`}>
             <Table.Cell>{formatItem(sell.name)}</Table.Cell>
+            <Table.Cell>{sell.quantity}</Table.Cell>
             <Table.Cell>{`${sell.bazaar.toLocaleString()}g`}</Table.Cell>
           </Table.Row>
         ))}
