@@ -105,7 +105,7 @@ const getCharCrafts = async (query, charid) => {
   try {
     const statement = `SELECT skillid, value, rank FROM char_skills AS s
             JOIN chars AS c ON c.charid = s.charid
-            WHERE skillid BETWEEN 48 AND 57 AND charname = ?;`;
+            WHERE skillid BETWEEN 48 AND 57 AND deleted IS null AND charname = ?;`;
     const response = await query(statement, [charid]);
     const crafts = {
       Fishing: 0,
@@ -303,10 +303,7 @@ const getCharData = async (query, charname) => {
   }
 };
 
-const fetchChars = async (
-  query,
-  { search = '', limit = 500, online = false, offset = 0 }
-) => {
+const fetchChars = async (query, { search = '', limit = 500, online = false, offset = 0 }) => {
   try {
     const total = await query(
       `SELECT COUNT(*) AS ct FROM chars
@@ -322,12 +319,7 @@ const fetchChars = async (
             LEFT JOIN accounts ON chars.accid = accounts.id
             WHERE chars.deleted IS NULL AND gmlevel = 0 AND charname LIKE ? AND status < 5
             HAVING isOnline IN (1,?) ORDER BY chars.charname ASC LIMIT ? OFFSET ?;`;
-    const results = await query(statement, [
-      `${search}%`,
-      online ? 1 : 0,
-      limit,
-      offset,
-    ]);
+    const results = await query(statement, [`${search}%`, online ? 1 : 0, limit, offset]);
     return {
       total: total[0].ct,
       chars: results.map(char => ({

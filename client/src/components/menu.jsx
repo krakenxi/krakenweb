@@ -13,70 +13,37 @@ export default ({ active, selection, onClick }) => {
         News
         <Icon name="home" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/install"
-        active={selection === '/install'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/install" active={selection === '/install'} onClick={onClick}>
         Install
         <Icon name="computer" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/tools"
-        active={selection === '/tools'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/tools" active={selection === '/tools'} onClick={onClick}>
         Tools
         <Icon name="wrench" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/links"
-        active={selection === '/links'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/links" active={selection === '/links'} onClick={onClick}>
         Links
         <Icon name="linkify" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/rules"
-        active={selection === '/rules'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/rules" active={selection === '/rules'} onClick={onClick}>
         Rules
         <Icon name="gavel" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/about"
-        active={selection === '/about'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/about" active={selection === '/about'} onClick={onClick}>
         FAQ
         <Icon name="info" />
       </Menu.Item>
-      <Menu.Item
-        as={Link}
-        to="/contact"
-        active={selection === '/contact'}
-        onClick={onClick}
-      >
+      <Menu.Item as={Link} to="/contact" active={selection === '/contact'} onClick={onClick}>
         Contact
         <Icon name="phone" />
       </Menu.Item>
       <Menu.Item className="gm_menu-credits">
         <div style={{ fontSize: '10px' }}>
-          All FINAL FANTASY&reg; XI content and images &copy; 2002-2020 SQUARE
-          ENIX CO., LTD. All Rights Reserved.
+          All FINAL FANTASY&reg; XI content and images &copy; 2002-
+          {new Date().getFullYear()} SQUARE ENIX CO., LTD. All Rights Reserved.
         </div>
         <br />
-        <div style={{ fontSize: '10px' }}>
-          FINAL FANTASY&reg; is a registered trademark of SQUARE ENIX CO., LTD.
-          All Rights Reserved.
-        </div>
+        <div style={{ fontSize: '10px' }}>FINAL FANTASY&reg; is a registered trademark of SQUARE ENIX CO., LTD. All Rights Reserved.</div>
       </Menu.Item>
     </Menu>
   );
