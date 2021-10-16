@@ -43,7 +43,7 @@ export default ({ extra, results = 0, perPageDefault = 10, changePage = () => {}
         activePage={activePage}
         onPageChange={updateActivePage}
       />
-      <div className="eden_pagination-dropdown">
+      <div className="kraken_pagination-dropdown">
         Displaying <Dropdown inline options={options} onChange={updatePerPage} defaultValue={perPage} /> results per page
       </div>
     </>

@@ -68,14 +68,14 @@ export default ({ charname, setLoading, setSearch }) => {
             </span>
             <span className="gm_player-title">{player.title}</span>
           </div>
-          <div className="eden_player-header-right">
+          <div className="kraken_player-header-right">
             <Linkshell ls={equip && equip.ls1} />
             <Linkshell ls={equip && equip.ls2} />
             <Icon name="power off" color={player.online ? 'green' : 'red'} />
           </div>
         </div>
       </Header>
-      <div className="eden_profile-content">
+      <div className="kraken_profile-content">
         <Equipment name={player.name} job={player.jobString} ranks={player.ranks} callback={setEquip} />
         <Jobs {...player.jobs} />
         <Crafts name={player.name} />

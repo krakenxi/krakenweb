@@ -52,7 +52,7 @@ export default ({ name, job, ranks, callback }) => {
 
   const { main, sub, ranged, ammo, head, body, hands, legs, feet, neck, waist, ear1, ear2, ring1, ring2, back } = equip;
   return (
-    <div className="eden_equip-section">
+    <div className="kraken_equip-section">
       <div className="player-equipbox">
         {main.itemid ? itemSlot(main) : emptySlot(1)}
         {sub.itemid ? itemSlot(sub) : emptySlot(2)}
@@ -71,15 +71,15 @@ export default ({ name, job, ranks, callback }) => {
         {legs.itemid ? itemSlot(legs) : emptySlot(15)}
         {feet.itemid ? itemSlot(feet) : emptySlot(16)}
       </div>
-      <span className="eden_player-nations">
-        <img className="eden_player-nation" alt="" src={images.flags.sandoria} />
+      <span className="kraken_player-nations">
+        <img className="kraken_player-nation" alt="" src={images.flags.sandoria} />
         {ranks.sandoria}
-        <img className="eden_player-nation" alt="" src={images.flags.bastok} />
+        <img className="kraken_player-nation" alt="" src={images.flags.bastok} />
         {ranks.bastok}
-        <img className="eden_player-nation" alt="" src={images.flags.windurst} />
+        <img className="kraken_player-nation" alt="" src={images.flags.windurst} />
         {ranks.windurst}
       </span>
-      <p className="eden_player-job">{job}</p>
+      <p className="kraken_player-job">{job}</p>
     </div>
   );
 };

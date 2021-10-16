@@ -106,7 +106,7 @@ export default ({ history, itemname, setLoading }) => {
             </Button>
           )}
         </div>
-        <div className="eden_item-description">
+        <div className="kraken_item-description">
           {item.desc &&
             item.desc.split('\n').map((s, i) => (
               <p key={`desc_ln_${i}`}>

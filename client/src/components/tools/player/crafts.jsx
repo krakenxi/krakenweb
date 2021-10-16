@@ -33,7 +33,7 @@ export default ({ name }) => {
   }
 
   return (
-    <div className="eden_player-jobs">
+    <div className="kraken_player-jobs">
       <h6>Crafts</h6>
       <table>
         <tbody>
