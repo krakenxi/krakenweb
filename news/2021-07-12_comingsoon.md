@@ -1,7 +1,5 @@
 ---
-date: 2021-07-12T07:00:00.000Z
+date: 07/12/2021
 author: Kraken
 title: Coming Soon!
 ---
-
-[](https://bosspm.ca/wp-content/uploads/2020/01/coming-soon5-600x271.png)

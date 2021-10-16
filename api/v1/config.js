@@ -6,6 +6,7 @@ module.exports = {
         'If something feels like it is broken, please report it.',
         'Do not claim mobs and wait for others to show up. If you claim the mob then you should be killing it.',
         'Harassment of any kind is NOT allowed.',
+        'Replies to a Yell should be done through Tell.',
         'Hacking/exploiting/cheating of any kind is NOT allowed.',
         'Any scripts, bots, or addons that automate actions are NOT allowed. Macros using the /wait or <wait> are OK.',
         'Any plugin or addon that gives an advantage or abilities that you normally would not have is not allowed.',

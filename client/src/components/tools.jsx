@@ -27,9 +27,9 @@ const Tools = () => {
     <div className="gm_tools">
       <div className="gm_tools-content">
         <Menu pointing className="wrapped">
-          {/* <TabItem to="account" disabled activeTab={activeTab}>
+          <TabItem to="account" activeTab={activeTab}>
             User Management
-          </TabItem> */}
+          </TabItem>
           <TabItem to="online" activeTab={activeTab}>
             Who's Online
           </TabItem>
@@ -46,7 +46,7 @@ const Tools = () => {
         <Router>
           <OnlineList path="/" />
           <OnlineList path="online" />
-          {/* <Accounts path="account" /> */}
+          <Accounts path="account" />
           <Itemsearch path="item/*" history={history} />
           <Playersearch path="player/*" history={history} />
           {/* <YellTab path="yells" /> */}

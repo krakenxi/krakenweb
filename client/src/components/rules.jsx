@@ -20,8 +20,7 @@ const Rules = ({ list }) => {
         <Col>
           <InfoDisplay title="Rules">
             <Card.Text>
-              The main goal is to have fun.  But in order to achieve this and keep the peace,
-              a few rules are expected to be followed.  Please look over them before
+              The main goal is to have fun.  But a few rules are expected to be followed.  Please look over them before
               playing on Kraken.
             </Card.Text>
             <ol>
@@ -34,7 +33,7 @@ const Rules = ({ list }) => {
         </Col>
       </Row>
 
-      <Row className="my-3">
+      {/*<Row className="my-3">
         <Col>
           <InfoDisplay title="Yell and Shout Rules">
             <ol>
@@ -47,7 +46,7 @@ const Rules = ({ list }) => {
         </Col>
       </Row>
 
-      {/*<Row className="my-3">
+      <Row className="my-3">
         <Col>
           <InfoDisplay title="Third-party software">
             <Card.Text>
