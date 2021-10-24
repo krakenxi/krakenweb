@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NecridX/krakenxi.github.oi.git"
+    "url": "git+https://github.com/krakenxi/krakenxi.github.oi.git"
   },
   "keywords": [],
   "author": "Scott Lassen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NecridX/krakenxi.github.oi.git"
+    "url": "https://github.com/krakenxi/krakenxi.github.oi.git"
   },
   "homepage": "https://krakenxi.github.oi",
   "dependencies": {
