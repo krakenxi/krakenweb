@@ -99,13 +99,6 @@ export default ({ user, logout, reload }) => {
                     {char.title}
                   </Card.Description>
                 </Card.Content>
-                <Card.Content>
-                  <Linkshell ls={equip && equip.ls1} />
-                  <Linkshell ls={equip && equip.ls2} />
-                  <Equipment name={player.name} job={player.jobString} ranks={player.ranks} callback={setEquip} />
-                  <Jobs {...player.jobs} />
-                  <Crafts name={player.name} />
-                </Card.Content>
               </Card>
             ))}
           </Card.Group>
