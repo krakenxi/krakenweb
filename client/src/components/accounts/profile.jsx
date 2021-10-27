@@ -2,10 +2,10 @@ import React from 'react';
 import { Segment, Label, List, Message, Card, Image, Icon, Button, Modal, Form, Input } from 'semantic-ui-react';
 import apiUtil from '../../apiUtil';
 import images from '../../images';
-import Crafts from './tools/player/crafts';
-import Equipment from './tools/player/equipment';
-import Jobs from './tools/player/jobs';
-import './tools/player/playerStyles.css';
+import Crafts from './player/crafts';
+import Equipment from './player/equipment';
+import Jobs from './player/jobs';
+import './player/playerStyles.css';
 
 export default ({ user, logout, reload }) => {
   const [modalOpen, setModalOpen] = React.useState(null);
