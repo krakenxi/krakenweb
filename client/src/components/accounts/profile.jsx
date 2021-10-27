@@ -13,6 +13,9 @@ export default ({ user, logout, reload }) => {
   const [password, setPassword] = React.useState('');
   const lastLogin = new Date(user.timelastmodify);
 
+  const [player, setPlayer] = React.useState(null);
+  const [equip, setEquip] = React.useState(null);
+
   const updateField = (field, value) => {
     apiUtil.put(
       {
