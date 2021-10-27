@@ -41,6 +41,19 @@ export default ({ user, logout, reload }) => {
     );
   };
 
+  const Linkshell = ({ ls }) => {
+    if (!ls || !ls.itemid) {
+      return null;
+    }
+
+    return (
+      <span className="gm_linkshell">
+        <img alt="" src={images.item(ls.itemid)} />
+        <span>{ls.signature}</span>
+      </span>
+    );
+  };
+
   return (
     <>
         <Modal className="gm_field-change" closeOnDimmerClick open={modalOpen === 'email'} onClose={() => setModalOpen('email')}>
