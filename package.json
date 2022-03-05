@@ -15,6 +15,7 @@
     "build:server": "tsc",
     "build": "npm-run-all --print-label clean --parallel build:*",
     "start": "node build/index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "test:e2e": "cross-env JEST_PUPPETEER_CONFIG=tests/e2e/jest-puppeteer.config.js jest --runInBand -c tests/e2e/jest.config.js",
     "test": "npm-run-all --print-label test:*"
   },
