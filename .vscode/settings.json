@@ -13,6 +13,7 @@
         "editor.formatOnSave": true
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
     }
 }

@@ -7,7 +7,7 @@ const subjects = [
   {
     key: 'report',
     value: 'report',
-    text: 'I want to report a violation of the Eden terms and conditions',
+    text: 'I want to report a violation of the Kraken terms and conditions',
   },
   {
     key: 'appeal',

@@ -102,12 +102,12 @@ export default () => (
         Ensure that when the build is complete it says "========== Build: 3 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========". You can view the output by
         selecting the View menu and then clicking on Output
       </li>
-      <li>Run the Play on Eden shortcut that came with your normal Eden installation.</li>
+      <li>Run the Play on Kraken shortcut that came with your normal Kraken installation.</li>
       <li>
         Press the + button at the bottom to create a new configuration. If it doesn't show options to edit it then right click the new configuration and then
         click Edit Configuration
       </li>
-      <li>Set the window configurations to the same that you have on normal Eden and then click the boot tab. Only edit the following in the boot tab:</li>
+      <li>Set the window configurations to the same that you have on normal Kraken and then click the boot tab. Only edit the following in the boot tab:</li>
       <li>
         <b>Configuration name:</b> Developer
       </li>
@@ -127,7 +127,7 @@ export default () => (
         DSGame-server will take the longest to boot. It is not uncommon for it to take 6 minutes or longer to load. It will be ready to log-in when it says "The
         map-server is ready to work".
       </li>
-      <li>Run the Play on Eden shortcut and then click on the Developer configuration to connect to your local development server.</li>
+      <li>Run the Play on Kraken shortcut and then click on the Developer configuration to connect to your local development server.</li>
       <li>You may get stuck on downloading data when you first log-in. In this case just reboot the three servers and load Ashita again.</li>
     </ul>
   </div>

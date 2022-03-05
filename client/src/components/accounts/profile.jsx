@@ -81,7 +81,7 @@ export default ({ user, logout, reload }) => {
         {user.chars.length === 0 ? (
           <Message info>
             <Message.Header>No characters have been created for this account.</Message.Header>
-            <Message.Content>Log into the game and create a character to start playing on Eden!</Message.Content>
+            <Message.Content>Log into the game and create a character to start playing on Kraken!</Message.Content>
           </Message>
         ) : (
           <Card.Group>

@@ -2,10 +2,12 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
 import { createHistory, Link, Router, useMatch } from '@reach/router';
+// eslint-disable-next-line no-unused-vars
 import Accounts from './accounts';
 import Itemsearch from './tools/itemsearch';
 import Playersearch from './tools/playersearch';
 import OnlineList from './tools/OnlineList';
+// eslint-disable-next-line no-unused-vars
 import YellTab from './tools/YellTab';
 
 const TabItem = ({ to, activeTab, disabled = false, children }) => (
@@ -22,9 +24,9 @@ const Tools = () => {
     <div className="gm_tools">
       <div className="gm_tools-content">
         <Menu pointing className="wrapped">
-          <TabItem to="account" disabled activeTab={activeTab}>
+          {/* <TabItem to="account" activeTab={activeTab}>
             User Management
-          </TabItem>
+          </TabItem> */}
           <TabItem to="online" activeTab={activeTab}>
             Who's Online
           </TabItem>
@@ -34,9 +36,9 @@ const Tools = () => {
           <TabItem to="player" activeTab={activeTab}>
             Player Search
           </TabItem>
-          <TabItem to="yells" activeTab={activeTab}>
+          {/* <TabItem to="yells" activeTab={activeTab}>
             Yells
-          </TabItem>
+          </TabItem> */}
         </Menu>
         <Router>
           <OnlineList path="/" />
@@ -44,7 +46,7 @@ const Tools = () => {
           {/* <Accounts path="account" /> */}
           <Itemsearch path="item/*" history={history} />
           <Playersearch path="player/*" history={history} />
-          <YellTab path="yells" />
+          {/* <YellTab path="yells" /> */}
         </Router>
       </div>
     </div>

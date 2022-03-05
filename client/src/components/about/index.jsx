@@ -1,6 +1,7 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from '@reach/router';
+import { Row, Col } from 'react-bootstrap';
 import InfoDisplay from '../InfoDisplay';
 
 const About = () => {
@@ -8,21 +9,16 @@ const About = () => {
     <>
       <Row className="mb-3">
         <Col>
-          <InfoDisplay title={"What's Different between Eden, other private servers, and retail?"}>
+          <InfoDisplay title="About">
             <Card.Text>
-              Eden was created in part to recreate the era experience as close as possible. We define era as anything that happened before the Wings of the
-              Goddess release on November 20th, 2007. While FFXI is still a great game today, it is vastly different than it was in 2007. We don't aim to take
-              the place of retail today, and we encourage you to subscribe to it, if nothing else to finish the amazing storyline.
-            </Card.Text>
-            <Card.Text>
-              Many past players of FFXI long for the days of a cooperative environment where "quality of life" was an afterthought. Because there is no classic
-              solution from SQUARE ENIX CO., LTD, Eden was created to fill that desire. Our vision is to recreate the 2007 era experience as closely as possible
-              with as few deviations as possible.
-            </Card.Text>
-            <Card.Text>
-              While all private servers have some deviation from era retail, we strive to be as close to possible, and as such do extensive research on
-              everything before implementing it. This includes everything from mob behavior, damage calculations, and magic hit rate, to having each individual
-              battle and event be as close as possible to the true era experience.
+              Looking for that old school feel and challenge but still want to be able to experience some of the newer content? Then look no further than
+              Kraken!
+              <br />
+              If interested in playing on this server, follow the{' '}
+              <b>
+                <Link to="/install">Installation</Link>
+              </b>{' '}
+              guide! It will guide you with everything you need to setup the client and start playing today!
             </Card.Text>
           </InfoDisplay>
         </Col>
@@ -30,92 +26,65 @@ const About = () => {
 
       <Row className="my-3">
         <Col>
-          <InfoDisplay title="How has Eden deviated from retail?">
-            <Card.Text>
-              While our ultimate goal is to mimic era as closely as possible, there are a handful of deviations from era highlighted below. These items are
-              subject to change as the playerbase and game evolves.
-            </Card.Text>
+          <InfoDisplay title="Server Settings">
             <table className="ui celled table">
               <thead>
                 <tr>
-                  <th>Eden Implementation</th>
-                  <th>Retail Era Implementation</th>
-                  <th>Reasoning</th>
+                  <th>Settings</th>
+                  <th>Kraken</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>PUP has a B in h2h rating</td>
-                  <td>PUP has a C+ in h2h rating</td>
-                  <td>balance</td>
-                </tr>
-                <tr>
-                  <td>PUP Automatons have retail magic casting AI which gives them a recast timer for each magic type</td>
-                  <td>The PUP's Automaton had a shared recast timer for all magic types.</td>
-                  <td>balance</td>
-                </tr>
-                <tr>
-                  <td>The auction house has unlimited listings, is shared across all areas and items expire after 30 real life days</td>
-                  <td>The auction house is limited to 7 listings, had distinct AHs per city/region, and items expire after 3 real life days</td>
-                  <td>economy</td>
-                </tr>
-                <tr>
-                  <td>5/5 Category 2 merits available.</td>
-                  <td>3/5 Category 2 merits available.</td>
-                  <td>balance</td>
-                </tr>
-                <tr>
+                  <td>Level Cap</td>
                   <td>
-                    Wardrobe 1 is awarded by talking to your Moogle after attaining Rank 3, Wardrobe 2 by talking to your Moogle after attaining Rank 6, and
-                    Wardrobe 3 is unlocked by completing Apocalpyse Nigh.
+                    75. <br />
+                    <i>Note: May be increased later on.</i>
                   </td>
-                  <td>Wardrobes were not available.</td>
-                  <td>economy</td>
                 </tr>
                 <tr>
-                  <td>Some Ores/Logs/Hides/Beastman armor et. cetera stack</td>
-                  <td>Some Ores/Logs/Hides/Beastman armor et. cetera did not stack</td>
-                  <td>economy</td>
+                  <td>Expansions</td>
+                  <td>
+                    Currently only up to ToAU. <br />
+                    <i>Note: May be expanded later on.</i>
+                    <br />
+                    RoV and RoE are Enabled.
+                  </td>
                 </tr>
                 <tr>
-                  <td>Power leveling dirties exp if the PL draws hate</td>
-                  <td>Power leveling did not dirty exp.</td>
-                  <td>economy</td>
+                  <td>Exp</td>
+                  <td>Era Exp.</td>
                 </tr>
                 <tr>
-                  <td>Current retail fishing mini-game</td>
-                  <td>Era retail fishing mini-game</td>
-                  <td>technical limitations / cheat prevention</td>
+                  <td>Movement Speed</td>
+                  <td>Era Speed.</td>
                 </tr>
                 <tr>
-                  <td>Original difficulty CoP missions and original item flags (ex. rare/ex animas)</td>
-                  <td>Era difficulty CoP missions and era item flags</td>
-                  <td>teamwork</td>
+                  <td>Fame</td>
+                  <td>Era Fame.</td>
                 </tr>
                 <tr>
-                  <td>Mobs that link automatically dirty exp to person that linked</td>
-                  <td>Mobs did not dirty exp until an action was performed on them</td>
-                  <td>teamwork</td>
+                  <td>Auction House</td>
+                  <td>Unlimited Listings and posted for 30 days.</td>
                 </tr>
                 <tr>
-                  <td>Some mobs do not reset their window when the server is reset</td>
-                  <td>Some mobs windows would reset when a server was reset or crashed</td>
-                  <td>economy</td>
+                  <td>Items</td>
+                  <td>Removed Out of Era items.</td>
                 </tr>
                 <tr>
-                  <td>Ranged att/acc distance correction does not exist.</td>
-                  <td>Ranged attack and accuracy was dependent on distance from target and weapon/ammo.</td>
-                  <td>balance</td>
+                  <td>Mobs</td>
+                  <td>Era settings and levels.</td>
                 </tr>
                 <tr>
-                  <td>Level Sync</td>
-                  <td>No Level Sync</td>
-                  <td>teamwork</td>
+                  <td>Trusts</td>
+                  <td>Enabled.</td>
                 </tr>
                 <tr>
-                  <td>Mythic Weapons (currently unavailable)</td>
-                  <td>Mythic weapons did not exist</td>
-                  <td>toau content</td>
+                  <td>Homepoints</td>
+                  <td>
+                    Town Homepoints outside of cities are available. <br />
+                    No Homepoint teleportations.
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -123,21 +92,19 @@ const About = () => {
         </Col>
       </Row>
 
+      {/*
       <Row className="mt-3">
         <Col>
           <InfoDisplay title="How can I help?">
             <Card.Text>
-              There are several ways to help. You can fill out <a href="https://github.com/EdenServer/community/issues">bug reports</a>, report players who are
-              cheating by using the in-game ticketing system, volunteer as a staff member or tester, contribute code, or help out in the #tech-support discord
-              channel.
-            </Card.Text>
-            <Card.Text>
-              Eden does not accept donations or any other form of monetary contribution. Requests for real money payment should be reported to any staff member
-              via discord.
+              There are several ways to help. You can fill out bug reports,
+              report players who are cheating by using the in-game ticketing
+              system, volunteer as a staff member, contribute code, et. cetera.
             </Card.Text>
           </InfoDisplay>
         </Col>
       </Row>
+    */}
     </>
   );
 };

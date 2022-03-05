@@ -132,8 +132,8 @@ const getCharCrafts = async (query, charid) => {
 const getCharAH = async (query, charname, limit = 10) => {
   try {
     const statement = `SELECT name, CASE WHEN stack = 1 THEN stacksize ELSE 1 END AS stack_size,
-                              seller_name, buyer_name, sale, sell_date FROM server_auctionhouse
-            JOIN item_basic on item_basic.itemid = server_auctionhouse.itemid
+                              seller_name, buyer_name, sale, sell_date FROM auction_house
+            JOIN item_basic on item_basic.itemid = auction_house.itemid
             WHERE sell_date != 0 AND (seller_name = ? OR buyer_name = ?) ORDER BY sell_date DESC LIMIT ?;`;
     return await query(statement, [charname, charname, limit]);
   } catch (error) {

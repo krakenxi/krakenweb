@@ -25,8 +25,8 @@ const Page = props => {
             <News path="/posts" />
             <Install path="/install" info={config.install} />
             <Tools path="/tools/*" />
-            <Links path="/links" links={config.links} />
-            <Rules path="/rules" list={config.rules} />
+            {/* <Links path="/links" links={config.links} /> */}
+            {/* <Rules path="/rules" list={config.rules} /> */}
             <About path="/about" />
             {/* <Contact path="/contact" /> */}
           </Router>

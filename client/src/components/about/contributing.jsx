@@ -43,8 +43,8 @@ function Contributing() {
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link disabled eventKey="docs" href="#eden-docs">
-              Eden Docs
+            <Nav.Link disabled eventKey="docs" href="#kraken-docs">
+              Kraken Docs
             </Nav.Link>
           </Nav.Item>
         </Nav>
