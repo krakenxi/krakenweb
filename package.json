@@ -19,6 +19,9 @@
     "test:e2e": "cross-env JEST_PUPPETEER_CONFIG=tests/e2e/jest-puppeteer.config.js jest --runInBand -c tests/e2e/jest.config.js",
     "test": "npm-run-all --print-label test:*"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krakenxi/krakenxi.git"
