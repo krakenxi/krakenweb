@@ -9,7 +9,7 @@ import { loadItemKeys, loadItems, refreshOwnersCache } from './api/v1/utils/item
 import { refreshTitleCache } from './api/v1/utils/chars';
 import api from './api';
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 80;
 const app = express();
 
 app.use(bodyParser.json());
