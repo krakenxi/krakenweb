@@ -113,7 +113,7 @@ export default ({ history, itemname, setLoading }) => {
                 <br />
               </p>
             ))}
-          {item.armor && <p>{item.armor}</p>}
+          {item.equipment && <p>{item.equipment}</p>}
         </div>
       </Header>
       <Accordion fluid styled>

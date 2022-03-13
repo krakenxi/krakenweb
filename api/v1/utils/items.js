@@ -4,7 +4,7 @@ import cparse from './crafts';
 const loadItems = async query => {
   try {
     const statement = `SELECT *, b.itemid AS id, b.name AS name,
-                IF(a.itemid IS NOT NULL, 1, 0) AS isArmor,
+                IF(a.itemid IS NOT NULL, 1, 0) AS isEquipment,
                 IF(f.itemid IS NOT NULL, 1, 0) AS isFurnishing,
                 IF(l.itemid IS NOT NULL, 1, 0) AS hasLatents,
                 IF(m.itemid IS NOT NULL, 1, 0) AS hasMods,

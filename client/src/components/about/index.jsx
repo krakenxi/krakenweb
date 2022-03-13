@@ -48,7 +48,7 @@ const About = () => {
                     Currently only up to ToAU. <br />
                     <i>Note: May be expanded later on.</i>
                     <br />
-                    RoV and RoE are Enabled.
+                    RoV and RoE are Enabled. Spark shops are not available.
                   </td>
                 </tr>
                 <tr>
