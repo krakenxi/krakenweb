@@ -1,10 +1,12 @@
 import owner from '../../../client/src/owner';
 import cparse from './crafts';
 
+const lists = require('../lists');
+
 const loadItems = async query => {
   try {
     const statement = `SELECT *, b.itemid AS id, b.name AS name,
-                IF(a.itemid IS NOT NULL, 1, 0) AS isEquipment,
+                IF(a.itemid IS NOT NULL, 1, 0) AS isArmor,
                 IF(f.itemid IS NOT NULL, 1, 0) AS isFurnishing,
                 IF(l.itemid IS NOT NULL, 1, 0) AS hasLatents,
                 IF(m.itemid IS NOT NULL, 1, 0) AS hasMods,
@@ -21,69 +23,74 @@ const loadItems = async query => {
             LEFT JOIN item_puppet AS p ON b.itemid = p.itemid
             LEFT JOIN item_usable AS u ON b.itemid = u.itemid
             LEFT JOIN item_weapon AS w ON b.itemid = w.itemid;`;
-    return await query(statement);
+    const results = await query(statement, [], false);
+    const byId = {};
+    const byName = {};
+
+    results.forEach(r => {
+      if (r.level > 75) {
+        return;
+      }
+
+      // Populate database item object with display name, description, and sortname from the JSON info file.
+      const { name, sort, desc } = lists.items[r.id];
+      r.displayName = name;
+      r.sort = sort;
+      r.desc = desc;
+
+      byId[r.id] = r;
+
+      const nameKey = r.name.toLowerCase();
+      if (!(nameKey in byName)) {
+        byName[nameKey] = r;
+      }
+    });
+    return { byId, byName };
   } catch (error) {
     console.error('Error while loading items', error);
-    return [];
-  }
-};
-
-const loadItemKeys = async query => {
-  try {
-    const statement = `SELECT item_basic.itemid, item_basic.name, level, jobs FROM item_basic
-            LEFT JOIN item_equipment ON item_basic.itemid = item_equipment.itemid;`;
-    const results = await query(statement);
-    const map = {};
-    results.forEach(
-      r =>
-        (map[r.itemid] = {
-          key: r.name,
-          level: r.level,
-          jobs: r.jobs,
-        })
-    );
-    return map;
-  } catch (error) {
-    console.error('Error while loading item keys', error);
     return {};
   }
 };
 
-const getRecipeFor = async (query, itemname) => {
+const getRecipeFor = async (query, itemid) => {
   try {
     const statement = `SELECT * FROM synth_recipes AS r
-    JOIN item_basic AS b ON r.result = b.itemid OR resultHQ1 = b.itemid OR resultHQ2 = b.itemid OR resultHQ3 = b.itemid WHERE b.name = ?;`;
-    return cparse.parse(await query(statement, [itemname]));
+    JOIN item_basic AS b ON r.result = b.itemid OR resultHQ1 = b.itemid OR resultHQ2 = b.itemid OR resultHQ3 = b.itemid WHERE b.itemid = ?;`;
+    return cparse.parse(await query(statement, [itemid]));
   } catch (error) {
     console.error('Error while getting specific recipe', error);
     return [];
   }
 };
 
-const getLastSold = async (query, itemname, stack = 0, count = 10) => {
+const getLastSold = async (query, itemid, stack = 0, count = 10) => {
   try {
-    const statement = `SELECT name, seller_name, buyer_name, sale, sell_date FROM auction_house
-            JOIN item_basic on item_basic.itemid = auction_house.itemid
-            WHERE sell_date != 0 AND item_basic.name = ? AND stack = ?
+    if (!itemid) {
+      return [];
+    }
+
+    const statement = `SELECT name, seller_name, buyer_name, sale, sell_date FROM auctionhouse
+            JOIN item_basic on item_basic.itemid = auctionhouse.itemid
+            WHERE buyer_name IS NOT NULL AND auctionhouse.itemid = ? AND stack = ?
             ORDER BY sell_date DESC LIMIT ?;`;
-    return await query(statement, [itemname, stack, count]);
+    return await query(statement, [itemid, stack, count]);
   } catch (error) {
     console.error('Error while getting last sold', error);
     return [];
   }
 };
 
-const getBazaars = async (query, itemname, limit = 300) => {
+const getBazaars = async (query, itemid, limit = 300) => {
   try {
     const statement = `SELECT charname, bazaar, SUM(quantity) AS quantity, IF(s.charid IS NULL, 0, 1) AS online_flag FROM char_inventory AS i
             JOIN item_basic AS b ON b.itemid = i.itemid
             JOIN chars AS c ON c.charid = i.charid
             JOIN accounts a ON a.id = c.accid
             LEFT JOIN accounts_sessions s on c.charid = s.charid
-            WHERE bazaar != 0 AND b.name = ? AND a.timelastmodify > NOW() - INTERVAL 30 DAY
+            WHERE bazaar != 0 AND b.itemid = ? AND a.timelastmodify > NOW() - INTERVAL 30 DAY
             GROUP BY charname, bazaar, online_flag
             ORDER BY CASE WHEN online_flag = 1 THEN 1 ELSE 2 END, bazaar, quantity, charname ASC LIMIT ?;`;
-    return await query(statement, [itemname, limit]);
+    return await query(statement, [itemid, limit]);
   } catch (error) {
     console.error('Error while getting bazaars', error);
     return [];
@@ -102,7 +109,7 @@ const refreshOwnersCache = async query => {
         AND a.status <= 1
         ORDER BY charname ASC;`;
 
-  const result = await query(statement);
+  const result = await query(statement, []);
 
   var updatedCache = {};
   for (var row of result) {
@@ -141,4 +148,12 @@ const getJobs = (level, jobs, idToStr) => {
   }
 };
 
-export { loadItems, loadItemKeys, getRecipeFor, getLastSold, getBazaars, getOwners, refreshOwnersCache, getJobs };
+const safeDecode = uri => {
+  try {
+    return decodeURIComponent(uri);
+  } catch (error) {
+    return '';
+  }
+};
+
+export { loadItems, getRecipeFor, getLastSold, getBazaars, getOwners, refreshOwnersCache, getJobs, safeDecode };

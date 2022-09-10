@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Row, Col } from 'react-bootstrap';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import InfoDisplay from './InfoDisplay';
 
 function install(props) {
@@ -207,7 +206,7 @@ function install(props) {
         </Col>
       </Row>
 
-      <Row className="mb-3">
+      {/* <Row className="mb-3">
         <Col>
           <InfoDisplay title="Make it Beautiful">
             <Card.Text>
@@ -217,7 +216,7 @@ function install(props) {
             </Card.Text>
           </InfoDisplay>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 }

@@ -2,12 +2,10 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
 import { createHistory, Link, Router, useMatch } from '@reach/router';
-// eslint-disable-next-line no-unused-vars
 import Accounts from './accounts';
 import Itemsearch from './tools/itemsearch';
 import Playersearch from './tools/playersearch';
 import OnlineList from './tools/OnlineList';
-// eslint-disable-next-line no-unused-vars
 import YellTab from './tools/YellTab';
 
 const TabItem = ({ to, activeTab, disabled = false, children }) => (

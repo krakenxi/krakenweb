@@ -131,11 +131,17 @@ const getCharCrafts = async (query, charid) => {
 
 const getCharAH = async (query, charname, limit = 10) => {
   try {
-    const statement = `SELECT name, CASE WHEN stack = 1 THEN stacksize ELSE 1 END AS stack_size,
-                              seller_name, buyer_name, sale, sell_date FROM auction_house
-            JOIN item_basic on item_basic.itemid = auction_house.itemid
-            WHERE sell_date != 0 AND (seller_name = ? OR buyer_name = ?) ORDER BY sell_date DESC LIMIT ?;`;
-    return await query(statement, [charname, charname, limit]);
+    const charQuery = `SELECT charid FROM chars WHERE charname = ? AND deleted IS NULL LIMIT 1`;
+    const charResult = await query(charQuery, [charname]);
+    if (!charResult || charResult.length < 1) {
+      return [];
+    }
+
+    const statement = `SELECT item_basic.itemid, name, CASE WHEN stack = 1 THEN stacksize ELSE 1 END AS stack_size,
+                              seller_name, buyer_name, sale, sell_date FROM server_auctionhouse
+            JOIN item_basic on item_basic.itemid = server_auctionhouse.itemid
+            WHERE sell_date != 0 AND (seller = ? OR buyer_name = ?) ORDER BY sell_date DESC LIMIT ?;`;
+    return await query(statement, [charResult[0].charid, charname, limit]);
   } catch (error) {
     console.error('Error while getting character AH', error);
     return [];
@@ -144,7 +150,7 @@ const getCharAH = async (query, charname, limit = 10) => {
 
 const getCharBazaar = async (query, charname) => {
   try {
-    const statement = `SELECT b.name, i.bazaar, SUM(quantity) quantity FROM char_inventory AS i
+    const statement = `SELECT b.itemid, b.name, i.bazaar, SUM(quantity) quantity FROM char_inventory AS i
             JOIN chars AS c ON c.charid = i.charid
             JOIN item_basic AS b ON b.itemid = i.itemid
             WHERE bazaar != 0 AND charname = ? GROUP BY name, bazaar

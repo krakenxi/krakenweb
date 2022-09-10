@@ -15,5 +15,6 @@
     "[javascriptreact]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
-    }
+    },
+    "python.terminal.activateEnvironment": false
 }

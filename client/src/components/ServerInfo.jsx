@@ -1,12 +1,10 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Row, Col } from 'react-bootstrap';
-// eslint-disable-next-line no-unused-vars
 import YellBox from './yellbox';
 import TimeInfo from './TimeInfo';
 
 function ServerInfo() {
-  // eslint-disable-next-line no-unused-vars
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
 
   return (

@@ -5,12 +5,23 @@ import mysql from 'mysql2';
 import path from 'path';
 import Cache from './api/v1/utils/cache';
 import preparedStatement from './api/v1/utils/db';
-import { loadItemKeys, loadItems, refreshOwnersCache } from './api/v1/utils/items';
+import { loadItems, refreshOwnersCache } from './api/v1/utils/items';
 import { refreshTitleCache } from './api/v1/utils/chars';
 import api from './api';
+import rateLimit from 'express-rate-limit';
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8081;
 const app = express();
+
+const limiter = rateLimit({
+  windowMs: 10000, // 10 seconds
+  max: 100, // Limit each IP to 100 requests per `window`
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+app.use(limiter);
+app.set('trust proxy', 1);
+app.get('/ip', (request, response) => response.send(request.ip));
 
 app.use(bodyParser.json());
 
@@ -36,7 +47,6 @@ app.locals.query = preparedStatement(app.locals.db);
 (async () => {
   try {
     app.locals.items = await loadItems(app.locals.query);
-    app.locals.itemKeys = await loadItemKeys(app.locals.query);
 
     // Setup cached results and refreshing of them
     await refreshOwnersCache(app.locals.query);

@@ -49,10 +49,10 @@ const descriptionWithElements = (description, line) => {
       lastStop = i + 1;
     }
   }
-  return <>{render}</>;
+  return render;
 };
 
-export default ({ history, itemname, setLoading }) => {
+export default ({ history, itemkey, setLoading }) => {
   const params = new URLSearchParams(history.location.search);
   const stack = params.get('stack');
 
@@ -63,11 +63,11 @@ export default ({ history, itemname, setLoading }) => {
   const [crafts, setCrafts] = React.useState(false);
   const isStack = stack === 'true';
 
-  const fetchItem = itemname => {
-    if (!itemname) return;
+  const fetchItem = itemkey => {
+    if (!itemkey) return;
 
     setLoading(true);
-    apiUtil.get({ url: `/api/v1/items/${itemname}`, json: true }, (error, data) => {
+    apiUtil.get({ url: `/api/v1/items/${itemkey}`, json: true }, (error, data) => {
       setItem(data);
       setLoading(false);
     });
@@ -77,10 +77,10 @@ export default ({ history, itemname, setLoading }) => {
 
   React.useEffect(() => {
     const getStack = stack !== null ? stack : false;
-    if (itemname) {
-      fetchMemoizedItem(encodeURIComponent(itemname), getStack);
+    if (itemkey) {
+      fetchMemoizedItem(encodeURIComponent(itemkey), getStack);
     }
-  }, [itemname, stack]);
+  }, [itemkey, stack]);
 
   if (!item) {
     return (
@@ -105,7 +105,7 @@ export default ({ history, itemname, setLoading }) => {
             </Button>
           )}
         </div>
-        <div className="eden_item-description">
+        <div className="kxi_item-description">
           {item.desc &&
             item.desc.split('\n').map((s, i) => (
               <p key={`desc_ln_${i}`}>
@@ -113,7 +113,7 @@ export default ({ history, itemname, setLoading }) => {
                 <br />
               </p>
             ))}
-          {item.equipment && <p>{item.equipment}</p>}
+          {item.armor && <p>{item.armor}</p>}
         </div>
       </Header>
       <Accordion fluid styled>
@@ -133,21 +133,21 @@ export default ({ history, itemname, setLoading }) => {
           Auction House
         </Accordion.Title>
         <Accordion.Content active={ah}>
-          <Ah name={item.key} stack={isStack} />
+          <Ah itemid={item.id} stack={isStack} />
         </Accordion.Content>
         <Accordion.Title active={bazaar} onClick={() => setBazaar(!bazaar)}>
           <Icon name="dropdown" />
           Bazaar
         </Accordion.Title>
         <Accordion.Content active={bazaar}>
-          <Bazaar name={item.key} />
+          <Bazaar itemid={item.id} />
         </Accordion.Content>
         <Accordion.Title active={crafts} onClick={() => setCrafts(!crafts)}>
           <Icon name="dropdown" />
           Crafting
         </Accordion.Title>
         <Accordion.Content active={crafts}>
-          <Crafts name={item.key} />
+          <Crafts itemid={item.id} />
         </Accordion.Content>
       </Accordion>
     </Segment>
