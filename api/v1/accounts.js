@@ -51,14 +51,14 @@ router.post('/register', (req, res) => {
   const { username, password, email, confirmUsername, confirmPassword, confirmEmail, verify } = req.body;
 
   /** common origins attemping to register
-   * https://www.edenxi.com/tools
-   * https://edenxi.com/tools
-   * http://www.edenxi.com/tools
-   * http://play.edenxi.com/tools
+   * https://www.kxi.com/tools
+   * https://kxi.com/tools
+   * http://www.kxi.com/tools
+   * http://play.kxi.com/tools
    */
   try {
     const tests = [
-      req.headers.referer === 'https://www.edenxi.com/tools' || req.headers.referer === 'https://edenxi.com/tools',
+      req.headers.referer === 'https://www.kxi.com/tools' || req.headers.referer === 'https://kxi.com/tools',
       !disallowedIP.includes(req.headers['x-forwarded-for']),
       password === confirmPassword,
       username.toLowerCase() === confirmUsername.toLowerCase(),

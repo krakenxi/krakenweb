@@ -84,7 +84,7 @@ router.post('/contact', (req, res) => {
           const contact = {
             author: {
               name: 'Anonymous',
-              icon_url: 'https://edenxi.com/public/models/unknown.jpg.webp',
+              icon_url: 'https://kxi.com/public/models/unknown.jpg.webp',
             },
             title: subject,
             color: 9862070,
