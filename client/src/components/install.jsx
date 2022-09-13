@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Row, Col } from 'react-bootstrap';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import ReactPlayer from 'react-player';
 import InfoDisplay from './InfoDisplay';
 

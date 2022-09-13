@@ -2,16 +2,12 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
 import { createHistory, Link, Router, useMatch } from '@reach/router';
-// eslint-disable-next-line no-unused-vars
+
 import Accounts from './accounts';
 import Itemsearch from './tools/itemsearch';
 import Playersearch from './tools/playersearch';
 import OnlineList from './tools/OnlineList';
-<<<<<<< HEAD
 import TimeInfo from './TimeInfo';
-=======
-// eslint-disable-next-line no-unused-vars
->>>>>>> parent of 9e6816d (kxi)
 import YellTab from './tools/YellTab';
 
 const TabItem = ({ to, activeTab, disabled = false, children }) => (

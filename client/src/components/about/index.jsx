@@ -46,13 +46,7 @@ const About = () => {
                   <td>Expansions</td>
                   <td>
                     Currently only up to ToAU. <br />
-<<<<<<< HEAD
                     <i>Note: May be expanded at a later date.</i>
-=======
-                    <i>Note: May be expanded later on.</i>
-                    <br />
-                    RoV and RoE are Enabled. Spark shops are not available.
->>>>>>> parent of 9e6816d (kxi)
                   </td>
                 </tr>
                 <tr>
