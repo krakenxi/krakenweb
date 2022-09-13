@@ -1,11 +1,11 @@
-.kxi_profile-content {
+.eden_profile-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 @media only screen and (max-width: 800px) {
-  .kxi_profile-content {
+  .eden_profile-content {
     flex-direction: column;
   }
 }
@@ -21,31 +21,31 @@
   margin: 0 4px;
 }
 
-.kxi_player-header-right {
+.eden_player-header-right {
   display: flex;
   align-items: center;
 }
 
-.ui.header .kxi_player-header-right > i.icon {
+.ui.header .eden_player-header-right > i.icon {
   margin-left: 16px;
   margin-right: 0;
 }
 
-.kxi_player-nations {
+.eden_player-nations {
   text-align: center;
 }
 
-.kxi_player-nation {
+.eden_player-nation {
   height: 16px;
   margin: 0 6px;
 }
 
-.kxi_equip-section {
+.eden_equip-section {
   display: inline-flex;
   flex-direction: column;
 }
 
-.kxi_player-jobs {
+.eden_player-jobs {
   display: inline-flex;
   flex-direction: column;
   border: 0.5px solid #ccc;
@@ -55,18 +55,18 @@
   margin: 4px;
 }
 
-.kxi_player-job {
+.eden_player-job {
   text-align: center;
   font-weight: bold;
 }
 
-.kxi_player-jobs > h6 {
+.eden_player-jobs > h6 {
   border-bottom: 0.5px solid #ccc;
   text-align: center;
   margin: 0;
 }
 
-.kxi_player-jobs td {
+.eden_player-jobs td {
   line-height: 0.9em;
   width: 65px;
 }

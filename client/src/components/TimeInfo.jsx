@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import InfoDisplay from './InfoDisplay';
+// eslint-disable-next-line no-unused-vars
 import Ballista from './Ballista';
 
 const weekDays = [

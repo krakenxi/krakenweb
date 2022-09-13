@@ -52,13 +52,13 @@ const Recipe = ({ recipe, index }) => {
   );
 };
 
-const Crafting = ({ itemid }) => {
+const Crafting = ({ name }) => {
   const [error, setError] = React.useState(false);
   const [crafts, setCrafts] = React.useState(null);
 
   const fetchCrafts = () => {
     setCrafts(null);
-    apiUtil.get({ url: `/api/v1/items/${itemid}/crafts` }, async (error, res) => {
+    apiUtil.get({ url: `/api/v1/items/${name}/crafts` }, async (error, res) => {
       try {
         if (!error && res.status === 200) {
           setCrafts(await res.json());
@@ -72,7 +72,7 @@ const Crafting = ({ itemid }) => {
     });
   };
 
-  React.useEffect(fetchCrafts, [itemid]);
+  React.useEffect(fetchCrafts, [name]);
 
   if (error) {
     return <p>Error fetching recipes...</p>;

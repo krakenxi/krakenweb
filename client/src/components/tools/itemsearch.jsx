@@ -10,7 +10,7 @@ import './item/itemStyles.css';
 const Itemsearch = ({ history }) => {
   const params = new URLSearchParams(history.location.search);
   const searchParam = params.get('search');
-  const itemkey = useMatch(':itemkey')?.itemkey;
+  const itemname = useMatch(':itemname')?.itemname;
 
   const [search, setSearch] = React.useState(searchParam || '');
   const [results, setResults] = React.useState([]);
@@ -21,7 +21,7 @@ const Itemsearch = ({ history }) => {
 
   const handleSearch = e => {
     if (e.key === 'Escape') {
-      setSearch(itemkey || search || '');
+      setSearch(itemname || search || '');
     } else if (e.key === 'Enter' && search) {
       navigate(`/tools/item?search=${search}`);
     }
@@ -54,7 +54,7 @@ const Itemsearch = ({ history }) => {
 
   const searchInput = React.useRef(null);
   React.useEffect(() => {
-    if (!itemkey) {
+    if (!itemname) {
       setSearch(searchParam || '');
       searchInput.current.focus();
 
@@ -69,7 +69,7 @@ const Itemsearch = ({ history }) => {
         fetchItems({ search: searchParam, limit: 10, offset: 0 });
       }
     }
-  }, [itemkey, searchParam]);
+  }, [itemname, searchParam]);
 
   return (
     <Segment className="gm_tools-container">
@@ -82,8 +82,8 @@ const Itemsearch = ({ history }) => {
         onKeyUp={handleSearch}
         onChange={e => setSearch(e.target.value)}
       />
-      {itemkey ? (
-        <Item itemkey={itemkey} history={history} setLoading={setLoading} />
+      {itemname ? (
+        <Item itemname={itemname} history={history} setLoading={setLoading} />
       ) : (
         <>
           <Pagination results={total} changePage={fetchItems} extra={{ search }} />
@@ -97,7 +97,7 @@ const Itemsearch = ({ history }) => {
           </List>
         </>
       )}
-      {!itemkey && results.length === 0 && (
+      {!itemname && results.length === 0 && (
         <Segment>{initial ? `No results for "${searchParam}".` : 'Begin searching an item by typing in the search box above.'}</Segment>
       )}
     </Segment>

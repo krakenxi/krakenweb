@@ -1,9 +1,9 @@
-.kxi_item-description {
+.eden_item-description {
   margin-left: 32px;
   font-size: 14px;
 }
 
-.kxi_item-description > p {
+.eden_item-description > p {
   margin-bottom: 0;
   max-width: 350px;
 }

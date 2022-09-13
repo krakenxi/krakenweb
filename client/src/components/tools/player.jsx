@@ -68,7 +68,7 @@ export default ({ charname, setLoading, setSearch }) => {
             </span>
             <span className="gm_player-title">{player.title}</span>
           </div>
-          <div className="kxi_player-header-right">
+          <div className="eden_player-header-right">
             <Linkshell ls={equip && equip.ls1} />
             <Linkshell ls={equip && equip.ls2} />
             <Icon
@@ -80,7 +80,7 @@ export default ({ charname, setLoading, setSearch }) => {
           </div>
         </div>
       </Header>
-      <div className="kxi_profile-content">
+      <div className="eden_profile-content">
         <Equipment name={player.name} job={player.jobString} ranks={player.ranks} callback={setEquip} />
         <Jobs {...player.jobs} />
         <Crafts name={player.name} />

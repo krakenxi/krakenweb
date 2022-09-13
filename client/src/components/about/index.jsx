@@ -39,14 +39,20 @@ const About = () => {
                   <td>Level Cap</td>
                   <td>
                     75. <br />
-                    <i>Note: May be increased at a later date.</i>
+                    <i>Note: May be increased later on.</i>
                   </td>
                 </tr>
                 <tr>
                   <td>Expansions</td>
                   <td>
                     Currently only up to ToAU. <br />
+<<<<<<< HEAD
                     <i>Note: May be expanded at a later date.</i>
+=======
+                    <i>Note: May be expanded later on.</i>
+                    <br />
+                    RoV and RoE are Enabled. Spark shops are not available.
+>>>>>>> parent of 9e6816d (kxi)
                   </td>
                 </tr>
                 <tr>
@@ -63,10 +69,7 @@ const About = () => {
                 </tr>
                 <tr>
                   <td>Auction House</td>
-                  <td>
-                    Unlimited Listings and no automatic AH returns. <br />
-                    <i>Note: May be changed at a later date.</i>
-                  </td>
+                  <td>Unlimited Listings and posted for 30 days.</td>
                 </tr>
                 <tr>
                   <td>Items</td>

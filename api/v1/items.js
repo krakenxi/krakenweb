@@ -2,24 +2,21 @@ const { Router } = require('express');
 
 const router = Router();
 
+const lists = require('./lists');
 const utils = require('./utils');
-
-function getItem(req, key) {
-  const safeKey = utils.items.safeDecode(key);
-  return req.app.locals.items.byId[safeKey] ?? req.app.locals.items.byName[safeKey];
-}
-
-function getItemIdFromKey(req, itemkey) {
-  return getItem(req, itemkey)?.id;
-}
 
 router.get('/', async (req, res) => {
   const cache = await req.app.locals.cache.fetch(req.originalUrl, () => {
     const { search = '', limit = 10, offset = 0 } = req.query;
-    const items = Object.values(req.app.locals.items.byId)
+    const items = Object.values(lists.items)
       .filter(i => {
-        if (i.displayName.toLowerCase().indexOf(search.toLowerCase()) !== -1 || i.sort.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
-          return true;
+        if (i.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || i.sort.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+          if (!req.app.locals.itemKeys[i.id]) {
+            console.warn(`itemid ${i.id} does not have an entry in itemKeys`);
+            return false;
+          } else {
+            return true;
+          }
         }
 
         return false;
@@ -31,11 +28,12 @@ router.get('/', async (req, res) => {
     return {
       total: items.length,
       items: items.splice(offset, limit).map(item => {
+        const key = req.app.locals.itemKeys[item.id].key;
         return {
           id: item.id,
-          name: item.displayName,
+          name: item.name,
           sort: item.sort,
-          key: item.id,
+          key,
         };
       }),
     };
@@ -44,35 +42,35 @@ router.get('/', async (req, res) => {
   res.send(cache);
 });
 
-router.get('/:itemkey/ah', async (req, res) => {
-  const { itemkey = '' } = req.params;
+router.get('/:itemname/ah', async (req, res) => {
+  const { itemname = '' } = req.params;
   const stack = req.query.stack === 'true' ? 1 : 0;
   const cache = await req.app.locals.cache.fetch(`${req.originalUrl}?stack=${stack}`, () => {
-    return utils.items.getLastSold(req.app.locals.query, getItemIdFromKey(req, itemkey), stack, 10);
+    return utils.items.getLastSold(req.app.locals.query, decodeURIComponent(itemname), stack, 10);
   });
 
   res.send(cache);
 });
 
-router.get('/:itemkey/crafts', async (req, res) => {
+router.get('/:itemname/crafts', async (req, res) => {
   const cache = await req.app.locals.cache.fetch(
     {
       key: req.originalUrl,
       interval: 28800000, // 8 hours
     },
     () => {
-      const { itemkey = '' } = req.params;
-      return utils.items.getRecipeFor(req.app.locals.query, getItemIdFromKey(req, itemkey));
+      const { itemname = '' } = req.params;
+      return utils.items.getRecipeFor(req.app.locals.query, decodeURIComponent(itemname));
     }
   );
 
   res.send(cache);
 });
 
-router.get('/:itemkey/bazaar', async (req, res) => {
+router.get('/:itemname/bazaar', async (req, res) => {
   const cache = await req.app.locals.cache.fetch(req.originalUrl, () => {
-    const { itemkey = '' } = req.params;
-    return utils.items.getBazaars(req.app.locals.query, getItemIdFromKey(req, itemkey));
+    const { itemname = '' } = req.params;
+    return utils.items.getBazaars(req.app.locals.query, decodeURIComponent(itemname));
   });
 
   res.send(cache);
@@ -81,28 +79,27 @@ router.get('/:itemkey/bazaar', async (req, res) => {
 router.get('/:itemid/owners', async (req, res) => {
   const cache = await req.app.locals.cache.fetch(req.originalUrl, () => {
     const { itemid = 0 } = req.params;
-    return utils.items.getOwners(req.app.locals.query, parseInt(utils.items.safeDecode(itemid)));
+    return utils.items.getOwners(req.app.locals.query, parseInt(decodeURIComponent(itemid)));
   });
 
   res.send(cache);
 });
 
-router.get('/:itemkey', async (req, res) => {
+router.get('/:itemname', async (req, res) => {
   const cache = await req.app.locals.cache.fetch(req.originalUrl, () => {
-    const { itemkey = '' } = req.params;
-    const item = getItem(req, itemkey);
+    const { itemname = '' } = req.params;
+    const item = Object.values(req.app.locals.items).filter(i => {
+      return i.name.toLowerCase() === decodeURIComponent(itemname).toLowerCase();
+    })[0];
 
     if (item) {
-      const { desc, id, displayName, sort, level, jobs } = item;
-      return {
-        desc,
-        id,
-        name: displayName,
-        sort,
-        stackable: Boolean(item.stackSize > 1),
-        armor: utils.items.getJobs(level, jobs, utils.chars.jobIdToString),
-        key: id,
-      };
+      const response = lists.items[item.id];
+      const info = req.app.locals.itemKeys[item.id];
+      const stackable = Boolean(item.stackSize > 1);
+      const equipment = utils.items.getJobs(info.level, info.jobs, utils.chars.jobIdToString);
+      return Object.assign({ equipment, stackable }, response, {
+        key: decodeURIComponent(itemname).toLowerCase(),
+      });
     }
   });
 
