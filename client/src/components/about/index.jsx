@@ -47,8 +47,6 @@ const About = () => {
                   <td>
                     Currently only up to ToAU. <br />
                     <i>Note: May be expanded at a later date.</i>
-                    <br />
-                    RoV and RoE are Enabled. No Spark shops.
                   </td>
                 </tr>
                 <tr>
@@ -84,9 +82,13 @@ const About = () => {
                 </tr>
                 <tr>
                   <td>Homepoints</td>
+                  <td>Homepoints are available but teleportation to and from others are disabled.</td>
+                </tr>
+                <tr>
+                  <td>Custom</td>
                   <td>
-                    Town Homepoints outside of cities are available. <br />
-                    No Homepoint teleportations.
+                    Extra Trusts are earned through various ways. <i>** Job, Mission, Quest, NM **</i> <br />
+                    Some Trusts will slightly differ from retail in behavior.
                   </td>
                 </tr>
               </tbody>

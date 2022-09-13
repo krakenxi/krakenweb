@@ -6,6 +6,7 @@ import Accounts from './accounts';
 import Itemsearch from './tools/itemsearch';
 import Playersearch from './tools/playersearch';
 import OnlineList from './tools/OnlineList';
+import TimeInfo from './TimeInfo';
 import YellTab from './tools/YellTab';
 
 const TabItem = ({ to, activeTab, disabled = false, children }) => (
@@ -34,6 +35,9 @@ const Tools = () => {
           <TabItem to="player" activeTab={activeTab}>
             Player Search
           </TabItem>
+          <TabItem to="timeinfo" activeTab={activeTab}>
+            Time Info
+          </TabItem>
           {/* <TabItem to="yells" activeTab={activeTab}>
             Yells
           </TabItem> */}
@@ -44,6 +48,7 @@ const Tools = () => {
           {/* <Accounts path="account" /> */}
           <Itemsearch path="item/*" history={history} />
           <Playersearch path="player/*" history={history} />
+          <TimeInfo path="timeinfo" />
           {/* <YellTab path="yells" /> */}
         </Router>
       </div>

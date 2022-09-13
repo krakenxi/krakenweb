@@ -7,7 +7,6 @@ function Home({ discordLink }) {
   return (
     <Row className="min-vh-100 flex-column flex-lg-row">
       <Col>
-        <TimeInfo />
         <InfoDisplay title="Welcome to Kraken!">
           <Card.Text>
             <a href={discordLink} target="_blank" rel="noreferrer">
