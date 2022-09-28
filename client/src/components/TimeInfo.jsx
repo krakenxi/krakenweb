@@ -121,7 +121,7 @@ const TimeInfo = () => {
   const date = new Date(now);
   return (
     <>
-      <InfoDisplay title="Time information">
+      <InfoDisplay>
         <table width="100%" style={{ fontSize: isTabletOrMobile ? '1em' : '1.1em' }}>
           <tbody>
             <tr>

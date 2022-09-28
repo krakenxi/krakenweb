@@ -4,6 +4,7 @@ import { Router } from '@reach/router';
 import { Container, Row, Col } from 'react-bootstrap';
 import Home from './home';
 import Install from './install';
+import Ubuntu from './ubuntu';
 import Links from './links';
 import Tools from './tools';
 import Rules from './rules';
@@ -25,6 +26,7 @@ const Page = props => {
             <News path="/posts" />
             <Install path="/install" info={config.install} />
             <Tools path="/tools/*" />
+            <Ubuntu path="/ubuntu" />
             {/* <Links path="/links" links={config.links} /> */}
             {/* <Rules path="/rules" list={config.rules} /> */}
             <About path="/about" />

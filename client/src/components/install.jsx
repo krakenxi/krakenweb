@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
 import { Card, Row, Col } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import InfoDisplay from './InfoDisplay';
@@ -13,6 +14,11 @@ function install(props) {
         <Col>
           <InfoDisplay title="Fresh Install & Update" className="my-3">
             <Card.Text>
+              If your installing FFXI on Ubuntu, then you will need to follow the{' '}
+              <b>
+                <Link to="/ubuntu">Ubuntu/Wine Installation</Link>
+              </b>{' '}
+              instead. <br /> <br />
               Official link to download{' '}
               <b>
                 <a href={info.source1} rel="noopener noreferrer" target="_blank">
